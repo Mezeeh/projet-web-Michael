@@ -5,12 +5,42 @@
 	<title>Contact</title>
 </head>
 <body>
+	<h1>Witchmod</h1>
 
 	<a href="index.html">Acceuil</a>
 	<a href="mods.html">Mods</a>
 	<a href="actualite.html">Actualité</a>
-	<a href="compte.html">Compte</a>
+	<a href="compte.html">Mon compte</a>
 	<a href="contact.html">Contact</a>
 
+	<h2>Contact</h2>
+	
+	<form method="post" action="contact.html">
+		<div>
+			<div>
+				<label for="nomContact">Nom</label>
+				<input id="nomContact" type="text" name="nomContact" tabindex="1">
+			</div>
+			
+			<div>
+				<label for="emailContact">E-mail</label>
+				<input id="emailContact" type="email" name="emailContact" tabindex="2">
+			</div>
+			
+			<div>
+				<label for="sujet">Sujet</label>
+				<input id="sujet" type="text" name="sujet" tabindex="3">
+			</div>
+			
+			<div>
+				<label for="message">Message</label>
+				<textarea id="message" name="message" rows="0" cols="20" tabindex="4"></textarea>
+			</div>
+			
+			<div>
+				<input type="submit" name="envoyer" value="Envoyer" tabindex="5">
+			</div>
+		</div>
+	</form>
 </body>
 </html>

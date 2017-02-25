@@ -5,13 +5,53 @@
 	<title>Identification</title>
 </head>
 <body>
-
+	<h1>Witchmod</h1>
+	
     <a href="index.html">Acceuil</a>
 	<a href="mods.html">Mods</a>
 	<a href="actualite.html">Actualité</a>
-	<a href="compte.html">Compte</a>
+	<a href="compte.html">Mon compte</a>
 	<a href="inscription-mot-de-passe.html">Mot de passe</a>
 	<a href="contact.html">Contact</a>
+	
+	<h2>Identification</h2>
+	
+	<form method="post" action="inscription-mot-de-passe.html">
+		<div>
+			<div>
+				<label for="nomUtilisateur">Veuillez entrer un nom d'utilisateur:<br></label>
+				<input id="nomUtilisateur" type="text" name="nomUtilisateur" tabindex="1">
+			</div>
+			
+			<div>
+				<label for="prenom">Veuillez entrer votre prénom:<br></label>
+				<input id="prenom" type="text" name="prenom" tabindex="2">
+			</div>
+			
+			<div>
+				<label for="nom">Veuillez entrer votre nom:<br></label>
+				<input id="nom" type="text" name="nom" tabindex="3">
+			</div>
+			
+			<div>
+				<input id="genreHomme" type="radio" name="genre" value="homme" checked tabindex="4">
+				<label for="genreHomme">Homme<br></label>
+				<input id="genreFemme" type="radio" name="genre" value="femme" tabindex="5">
+				<label for="genreFemme">Femme<br></label>
+				<input id="genreAutre" type="radio" name="genre" value="autre" tabindex="6">
+				<label for="genreAutre">Autre<br></label>
+			</div>
+			
+			<div>
+				<label for="dateFete">Veuillez sélectionner votre anniversaire :<br></label>
+				<input id="dateFete" type="date" name="dateFete" tabindex="7">
+			</div>
+			
+			<div>
+				<input type="submit" name="suivantP1" value="Suivant" tabindex="8">
+			</div>
+		</div>
+	</form>
     
 </body>
 </html>

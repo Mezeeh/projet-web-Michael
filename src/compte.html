@@ -5,13 +5,36 @@
 	<title>Compte</title>
 </head>
 <body>
+	<h1>Witchmod</h1>
 
 	<a href="index.html">Acceuil</a>
 	<a href="mods.html">Mods</a>
 	<a href="actualite.html">Actualité</a>
-	<a href="compte.html">Compte</a>
-	<a href="inscription-identification.html">Identification</a>
+	<a href="compte.html">Mon compte</a>
 	<a href="contact.html">Contact</a>
-
+	
+	<h2>Mon compte</h2>
+	
+	<form method="post" action="index.html">
+		<div>
+			<div>
+				<label for="id">Nom d'utilisateur:<br></label>
+				<input id="id" type="text" name="id" tabindex="1">
+			</div>
+			
+			<div>
+				<label for="psswrd">Mot de passe:<br></label>
+				<input id="psswrd" type="password" name="psswrd" tabindex="2">
+			</div>
+			
+			<div>
+				<input type="submit" name="connection" value="Se connecter" tabindex="3">
+			</div>
+			
+			<div>
+				<a href="inscription-identification.html">Pas encore de compte ? S'inscrire</a>
+			</div>
+		</div>
+	</form>
 </body>
 </html>
