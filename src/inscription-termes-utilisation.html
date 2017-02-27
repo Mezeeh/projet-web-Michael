@@ -3,23 +3,94 @@
 <head>
 	<meta charset="utf-8">
 	<title>Witchmod</title>
+	
+	<style>
+		*
+		{
+			padding:0px;
+			margin:0px;
+			text-decoration:none;
+			font-family:Constantia;
+		}
+		
+		h1 a img
+		{
+			margin: 10px;
+		}
+		
+		#menu
+		{
+			font-size : 24px;
+			border-bottom: 2px solid #c2c7d1;
+		}
+		
+		#menu li
+		{
+			display:inline-table;
+		}
+		
+		#menu li a
+		{
+			text-decoration : none;
+			color : black;
+			margin : 4px;
+		}
+		
+		#menu li a:hover
+		{
+			border-bottom: 2px solid #720404;
+		}
+		
+		#menu li a:focus, .active
+		{
+			border-bottom: 2px solid #720404;
+		}
+		
+		#menu li:first-child
+		{
+			margin-left:10px;
+		}
+		
+		h2
+		{
+			margin: 10px 10px 10px 10px;
+			color: #720404;
+			font-style: italic;
+		}
+		
+		#formulaire
+		{
+			margin-top: 60px;
+			text-align: center;
+		}
+		
+		#boutons
+		{
+			margin-top: 5px;
+		}
+	</style>
 </head>
 <body>
-	<h1>Witchmod</h1>
+	<div id="page">
+		<div id="tete">
+			<h1><a href="index.html"><img src="illustrations/witchmod-logo.png" alt="Logo de witchmod" style="width:150px;"></a></h1>
 
-    <a href="index.html">Acceuil</a>
-	<a href="mods.html">Mods</a>
-	<a href="actualite.html">Actualité</a>
-	<a href="compte.html">Mon compte</a>
-	<a href="inscription-mot-de-passe.html">Mot de passe</a>
-	<a href="contact.html">Contact</a>
-    
-	<h2>Termes d'utilisation</h2>
-	
-	<form method="post" action="index.html">
-		<div>	
-			<div>
-				<textarea id="termesUtil" name="termesUtil" rows="30" cols="100" readonly="readonly" tabindex="1">
+			<ul id="menu">
+				<li><a href="index.html">Acceuil</a></li>
+				<li><a href="mods.html">Mods</a></li>
+				<li><a href="actualite.html">Actualité</a></li>
+				<li><a href="compte.html">Mon compte</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		
+		<div id="contenu">
+			<h2>Termes d'utilisation</h2>
+			
+			<form method="post" action="index.html">
+				<div id="formulaire">	
+					<div id="termes">
+						<textarea id="termesUtil" name="termesUtil" rows="30" cols="100" readonly="readonly" tabindex="1">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at lorem ac leo faucibus molestie non nec magna. Aliquam non mauris rhoncus, mollis dui porta, convallis purus. Aenean sodales felis a velit cursus, nec pellentesque est sagittis. Donec faucibus at quam vitae vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut commodo, dolor vel ornare dignissim, erat magna accumsan sem, eget mattis massa dolor a mauris. Donec sit amet augue ac arcu mattis condimentum. Pellentesque eget arcu suscipit, facilisis urna in, consectetur ipsum. Cras risus libero, consectetur nec ipsum eget, bibendum malesuada nisi. Phasellus eget placerat elit. Nam et urna vestibulum, molestie ante id, placerat purus. Cras at erat tellus. Mauris ultricies congue commodo. Quisque non ullamcorper arcu. Sed quam felis, vestibulum vel lectus eget, imperdiet dapibus quam.
 
 Cras elementum facilisis neque. Maecenas porta, nibh rhoncus porta ultricies, enim libero ullamcorper arcu, in eleifend sem dui eu ipsum. Aliquam hendrerit nisi in rhoncus sagittis. Nulla luctus lectus id nisi rhoncus, quis porta diam feugiat. Donec id pharetra enim. Vestibulum vulputate consequat semper. Nulla facilisi. In hac habitasse platea dictumst. Vestibulum sollicitudin nisl tempus lacus posuere, vel condimentum risus porta. Nunc id lectus turpis.
@@ -29,20 +100,21 @@ Proin semper sed nisi sit amet interdum. Fusce purus lectus, facilisis facilisis
 In aliquet lacus eget libero tristique, mollis bibendum felis tincidunt. Quisque est arcu, ultrices sed convallis in, bibendum ac nulla. Cras ut sagittis massa. Donec pellentesque est id erat vestibulum, in vestibulum arcu consequat. Fusce vitae urna nec nisi efficitur pulvinar sed sit amet sapien. Fusce blandit venenatis ligula, nec malesuada erat tincidunt egestas. Quisque nisl erat, tempor mollis tempus ac, pretium ac purus. Quisque eget quam commodo, volutpat massa id, tincidunt elit.
 
 Aliquam lacinia rutrum neque sit amet congue. Suspendisse at sagittis diam, et mattis lectus. Curabitur eu pretium erat. Suspendisse ipsum sem, vehicula id est vitae, vestibulum tristique nulla. Etiam feugiat pretium finibus. Nulla non ante venenatis, commodo urna a, tempus tortor. In neque orci, rhoncus nec ornare non, interdum non nunc. Cras vitae pretium dui. Etiam tristique nisl nec ipsum ultricies, nec vestibulum lectus gravida. Donec ac pellentesque magna.
-				</textarea>
-			</div>
-			
-			<div>
-				<label for="accptTermesUtil">J'ai lu et accpete les termes d'utilisation ci-haut.</label>
-				<input id="accptTermesUtil" type="checkbox" name="acceptationTermesUtilisation" tabindex="2">
-			</div>
-			
-			<div>
-				<input type="button" name="precedentP3" value="Précedent" onclick="history.back(-1)" tabindex="3">
-				<input type="submit" name="enregistrer" value="Enregistrer" tabindex="4">
-			</div>
+						</textarea>
+					</div>
+					
+					<div id="case">
+						<label for="accptTermesUtil">J'ai lu et accpete les termes d'utilisation ci-haut.</label>
+						<input id="accptTermesUtil" type="checkbox" name="acceptationTermesUtilisation" tabindex="2">
+					</div>
+					
+					<div id="boutons">
+						<input type="button" name="precedentP3" value="Précedent" onclick="history.back(-1)" tabindex="3">
+						<input type="submit" name="enregistrer" value="Enregistrer" tabindex="4">
+					</div>
+				</div>
+			</form>
 		</div>
-	</form>
-	
+	</div>
 </body>
 </html>

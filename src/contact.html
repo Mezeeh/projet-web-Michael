@@ -3,44 +3,132 @@
 <head>
 	<meta charset="utf-8">
 	<title>Witchmod</title>
+	
+	<style>
+		*
+		{
+			padding:0px;
+			margin:0px;
+			text-decoration:none;
+			font-family:Constantia;
+		}
+		
+		h1 a img
+		{
+			margin: 10px;
+		}
+		
+		#menu
+		{
+			font-size : 24px;
+			border-bottom: 2px solid #c2c7d1;
+		}
+		
+		#menu li
+		{
+			display:inline-table;
+		}
+		
+		#menu li a
+		{
+			text-decoration : none;
+			color : black;
+			margin : 4px;
+		}
+		
+		#menu li a:hover
+		{
+			border-bottom: 2px solid #720404;
+		}
+		
+		#menu li a:focus, .active
+		{
+			border-bottom: 2px solid #720404;
+		}
+		
+		#menu li:first-child
+		{
+			margin-left:10px;
+		}
+		
+		h2
+		{
+			margin: 10px 10px 10px 10px;
+			color: #720404;
+			font-style: italic;
+		}
+		
+		#contenu
+		{
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		
+		#nom, #email, #sujet, #message, #envoyer
+		{
+			margin-bottom: 3px;
+		}
+		
+		#formulaire
+		{
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 60px;
+			width: 14em
+		}
+		
+		#envoyer
+		{
+			size: 50px;
+			margin-left: 100px;
+		}
+	</style>
 </head>
 <body>
-	<h1>Witchmod</h1>
+	<div id="page">
+		<div id="tete">
+			<h1><a href="index.html"><img src="illustrations/witchmod-logo.png" alt="Logo de witchmod" style="width:150px;"></a></h1>
 
-	<a href="index.html">Acceuil</a>
-	<a href="mods.html">Mods</a>
-	<a href="actualite.html">Actualité</a>
-	<a href="compte.html">Mon compte</a>
-	<a href="contact.html">Contact</a>
-
-	<h2>Contact</h2>
-	
-	<form method="post" action="contact.html">
-		<div>
-			<div>
-				<label for="nomContact">Nom</label>
-				<input id="nomContact" type="text" name="nomContact" tabindex="1">
-			</div>
-			
-			<div>
-				<label for="emailContact">E-mail</label>
-				<input id="emailContact" type="email" name="emailContact" tabindex="2">
-			</div>
-			
-			<div>
-				<label for="sujet">Sujet</label>
-				<input id="sujet" type="text" name="sujet" tabindex="3">
-			</div>
-			
-			<div>
-				<label for="message">Message</label>
-				<textarea id="message" name="message" rows="0" cols="20" tabindex="4"></textarea>
-			</div>
-			
-			<div>
-				<input type="submit" name="envoyer" value="Envoyer" tabindex="5">
-			</div>
+			<ul id="menu">
+				<li><a href="index.html">Acceuil</a></li>
+				<li><a href="mods.html">Mods</a></li>
+				<li><a href="actualite.html">Actualité</a></li>
+				<li><a href="compte.html">Mon compte</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
 		</div>
-	</form>
+		
+		<div id="contenu">
+			<h2>Contact</h2>
+		
+			<form method="post" action="contact.html">
+				<div id="formulaire">
+					<div id="nom">
+						<label for="nomContact">Nom</label>
+						<input id="nomContact" type="text" name="nomContact" tabindex="1">
+					</div>
+					
+					<div id="email">
+						<label for="emailContact">E-mail</label>
+						<input id="emailContact" type="email" name="emailContact" tabindex="2">
+					</div>
+					
+					<div id="sujet">
+						<label for="sujet">Sujet</label>
+						<input id="sujet" type="text" name="sujet" tabindex="3">
+					</div>
+					
+					<div id="message">
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="0" cols="20" tabindex="4"></textarea>
+					</div>
+					
+					<div id="envoyer">
+						<input type="submit" name="envoyer" value="Envoyer" tabindex="5">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

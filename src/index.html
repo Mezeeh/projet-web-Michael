@@ -5,62 +5,115 @@
 	<title>Witchmod</title>
 	
 	<style>
+		*
+		{
+			padding:0px;
+			margin:0px;
+			text-decoration:none;
+			font-family:Constantia;
+		}
+		
+		h1 a img
+		{
+			margin: 10px;
+		}
+		
 		#menu
 		{
-			background-color : #4286f4;
+			font-size : 24px;
+			border-bottom: 2px solid #c2c7d1;
 		}
 		
 		#menu li
 		{
-			//background-color : brown;
 			display:inline-table;
 		}
 		
 		#menu li a
 		{
-			//background-color : yellow;
 			text-decoration : none;
 			color : black;
-			margin : 4px
+			margin : 4px;
 		}
 		
 		#menu li a:hover
 		{
-			font-size : 24px;
-			color : #a3a5a8;
+			border-bottom: 2px solid #720404;
 		}
+		
+		#menu li a:focus, .active
+		{
+			border-bottom: 2px solid #720404;
+		}
+		
+		#menu li:first-child
+		{
+			margin-left:10px;
+		}
+		
+		h2
+		{
+			margin: 10px 10px 10px 10px;
+			color: #720404;
+			font-style: italic;
+		}
+		
+		#contenu
+		{
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		
+		#presentation, #objectifs
+		{
+			margin-bottom: 30px;
+		}
+		
+		h3
+		{
+			margin-bottom: 15px;
+			font-weight: bold;
+			color: #720404;
+		}
+		
 	</style>
 </head>
 <body>
-	<h1>Witchmod</h1>
-	
-	<ul id="menu">
-		<li><a href="index.html">Acceuil</a></li>
-		<li><a href="mods.html">Mods</a></li>
-		<li><a href="actualite.html">Actualité</a></li>
-		<li><a href="compte.html">Mon compte</a></li>
-		<li><a href="contact.html">Contact</a></li>
-	</ul>
-	
-	<h2>Acceuil</h2>
-	
-	<div>
-		<div>
-			<img src="illustrations/witchmod-logo.png" alt="Logo de witchmod">
-			<h3>Qu'est-ce que Witchmod ?</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque, augue eget vehicula rutrum, velit risus ultricies tortor, eu malesuada metus neque nec ligula. Nam arcu dolor, ultrices vel condimentum non, viverra vel augue. Mauris gravida ipsum in magna gravida tincidunt. Donec quis magna non justo gravida tristique accumsan ut purus. Vestibulum a dignissim lectus. Suspendisse sit amet auctor orci, ut interdum justo. Morbi sit amet augue elementum, fringilla ligula iaculis, interdum augue. Mauris semper turpis in velit aliquet sagittis. Aliquam imperdiet mi vitae commodo fringilla. Pellentesque eget augue porta, porttitor risus nec, fermentum mi. Sed eget egestas arcu. Quisque rutrum felis in maximus congue. In dui urna, egestas id blandit vel, tristique a metus. Curabitur magna felis, mollis sit amet erat eget, egestas pulvinar leo. Etiam quis pellentesque enim, quis tincidunt risus.</p>
+
+	<div id="page">
+		<div id="tete">
+			<h1><a href="index.html"><img src="illustrations/witchmod-logo.png" alt="Logo de witchmod" style="width:150px;"></a></h1>
+			
+			<ul id="menu">
+				<li><a href="index.html">Acceuil</a></li>
+				<li><a href="mods.html">Mods</a></li>
+				<li><a href="actualite.html">Actualité</a></li>
+				<li><a href="compte.html">Mon compte</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
 		</div>
 		
-		<div>
-			<img src="" alt="">
-			<h3>Objectifs futur</h3>
-			<p>In pretium eget mi et sodales. Vivamus vitae mi justo. Etiam lacus ex, semper sit amet neque a, molestie interdum est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sed ullamcorper eros, at varius tortor. Phasellus dui leo, tempor nec luctus ut, cursus non nisi. Nullam tincidunt orci sapien, a luctus lectus faucibus at. Integer congue sit amet enim hendrerit aliquam. Nunc maximus id turpis et ullamcorper. Nulla ornare id mi a condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam mattis nunc at velit porttitor, nec pretium dolor iaculis. Praesent porttitor vehicula orci. Nunc id sapien lobortis lectus sodales interdum in vitae lorem. Suspendisse rutrum augue sapien, a porttitor mi maximus vitae.</p>
-		</div>
-		
-		<div>
-			<img src="illustrations/pourquoi.png" alt="Pourquoi ?" style="width:200px;">
-			<p>Simplement pour rassembler la communauté de joueurs et de moddeurs de Witcher 3 sur un seul un même site afin de rendre la tâche de modder le jeu plus facile et agréable.</p>
+		<div id="contenu">
+			<h2>Acceuil</h2>
+			
+			<div id="presentation">
+				<img src="illustrations/witchmod-logo.png" alt="Logo de witchmod">
+				<h3>Qu'est-ce que Witchmod ?</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque, augue eget vehicula rutrum, velit risus ultricies tortor, eu malesuada metus neque nec ligula. Nam arcu dolor, ultrices vel condimentum non, viverra vel augue. Mauris gravida ipsum in magna gravida tincidunt. Donec quis magna non justo gravida tristique accumsan ut purus. Vestibulum a dignissim lectus. Suspendisse sit amet auctor orci, ut interdum justo. Morbi sit amet augue elementum, fringilla ligula iaculis, interdum augue. Mauris semper turpis in velit aliquet sagittis. Aliquam imperdiet mi vitae commodo fringilla. Pellentesque eget augue porta, porttitor risus nec, fermentum mi. Sed eget egestas arcu. Quisque rutrum felis in maximus congue. In dui urna, egestas id blandit vel, tristique a metus. Curabitur magna felis, mollis sit amet erat eget, egestas pulvinar leo. Etiam quis pellentesque enim, quis tincidunt risus.</p>
+			</div>
+			
+			<div id="objectifs">
+				<img src="" alt="">
+				<h3>Objectifs futurs</h3>
+				<p>In pretium eget mi et sodales. Vivamus vitae mi justo. Etiam lacus ex, semper sit amet neque a, molestie interdum est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed sed ullamcorper eros, at varius tortor. Phasellus dui leo, tempor nec luctus ut, cursus non nisi. Nullam tincidunt orci sapien, a luctus lectus faucibus at. Integer congue sit amet enim hendrerit aliquam. Nunc maximus id turpis et ullamcorper. Nulla ornare id mi a condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam mattis nunc at velit porttitor, nec pretium dolor iaculis. Praesent porttitor vehicula orci. Nunc id sapien lobortis lectus sodales interdum in vitae lorem. Suspendisse rutrum augue sapien, a porttitor mi maximus vitae.</p>
+			</div>
+			
+			<div id="pourquoi">
+				<img src="illustrations/pourquoi.png" alt="Pourquoi ?" style="width:200px;">
+				<p>Simplement pour rassembler la communauté de joueurs et de moddeurs de Witcher 3 sur un seul un même site afin de rendre la tâche de modder le jeu plus facile et agréable.</p>
+			</div>
 		</div>
 	</div>
+	
 </body>
 </html>

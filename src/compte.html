@@ -3,38 +3,127 @@
 <head>
 	<meta charset="utf-8">
 	<title>Witchmod</title>
+	
+	<style>
+		*
+		{
+			padding:0px;
+			margin:0px;
+			text-decoration:none;
+			font-family:Constantia;
+		}
+		
+		h1 a img
+		{
+			margin: 10px;
+		}
+		
+		#menu
+		{
+			font-size : 24px;
+			border-bottom: 2px solid #c2c7d1;
+		}
+		
+		#menu li
+		{
+			display:inline-table;
+		}
+		
+		#menu li a
+		{
+			text-decoration : none;
+			color : black;
+			margin : 4px;
+		}
+		
+		#menu li a:hover
+		{
+			border-bottom: 2px solid #720404;
+		}
+		
+		#menu li a:focus, .active
+		{
+			border-bottom: 2px solid #720404;
+		}
+		
+		#menu li:first-child
+		{
+			margin-left:10px;
+		}
+		
+		h2
+		{
+			margin: 10px 10px 10px 10px;
+			color: #720404;
+			font-style: italic;
+		}
+		
+		#contenu
+		{
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		
+		#formulaire
+		{
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 60px;
+			width: 10em
+		}
+		
+		#connection
+		{
+			margin-top: 9px;
+		}
+		
+		#connection a
+		{
+			color: lightgrey;
+		}
+		
+		#connection a:hover
+		{
+			color: blue;
+		}
+	</style>
 </head>
 <body>
-	<h1>Witchmod</h1>
+	<div id="page">
+		<div id="tete">
+			<h1><a href="index.html"><img src="illustrations/witchmod-logo.png" alt="Logo de witchmod" style="width:150px;"></a></h1>
 
-	<a href="index.html">Acceuil</a>
-	<a href="mods.html">Mods</a>
-	<a href="actualite.html">Actualité</a>
-	<a href="compte.html">Mon compte</a>
-	<a href="contact.html">Contact</a>
-	
-	<h2>Mon compte</h2>
-	
-	<form method="post" action="index.html">
-		<div>
-			<div>
-				<label for="id">Nom d'utilisateur:<br></label>
-				<input id="id" type="text" name="id" tabindex="1">
-			</div>
-			
-			<div>
-				<label for="psswrd">Mot de passe:<br></label>
-				<input id="psswrd" type="password" name="psswrd" tabindex="2">
-			</div>
-			
-			<div>
-				<input type="submit" name="connection" value="Se connecter" tabindex="3">
-			</div>
-			
-			<div>
-				<a href="inscription-identification.html">Pas encore de compte ? S'inscrire</a>
-			</div>
+			<ul id="menu">
+				<li><a href="index.html">Acceuil</a></li>
+				<li><a href="mods.html">Mods</a></li>
+				<li><a href="actualite.html">Actualité</a></li>
+				<li><a href="compte.html">Mon compte</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
 		</div>
-	</form>
+	
+		<div id="contenu">
+			<h2>Mon compte</h2>
+			
+			<form method="post" action="index.html">
+				<div id="formulaire">
+					<div id="id">
+						<label for="id">Nom d'utilisateur:<br></label>
+						<input id="id" type="text" name="id" tabindex="1">
+					</div>
+					
+					<div id="psswrd">
+						<label for="psswrd">Mot de passe:<br></label>
+						<input id="psswrd" type="password" name="psswrd" tabindex="2">
+					</div>
+					
+					<div id="connection">
+						<a href="inscription-identification.html">S'inscrire</a>
+						<input type="submit" name="connection" value="Se connecter" tabindex="3">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 </html>

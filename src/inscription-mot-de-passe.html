@@ -3,43 +3,114 @@
 <head>
 	<meta charset="utf-8">
 	<title>Witchmod</title>
+	
+	<style>
+		*
+		{
+			padding:0px;
+			margin:0px;
+			text-decoration:none;
+			font-family:Constantia;
+		}
+		
+		h1 a img
+		{
+			margin: 10px;
+		}
+		
+		#menu
+		{
+			font-size : 24px;
+			border-bottom: 2px solid #c2c7d1;
+		}
+		
+		#menu li
+		{
+			display:inline-table;
+		}
+		
+		#menu li a
+		{
+			text-decoration : none;
+			color : black;
+			margin : 4px;
+		}
+		
+		#menu li a:hover
+		{
+			border-bottom: 2px solid #720404;
+		}
+		
+		#menu li a:focus, .active
+		{
+			border-bottom: 2px solid #720404;
+		}
+		
+		#menu li:first-child
+		{
+			margin-left:10px;
+		}
+		
+		h2
+		{
+			margin: 10px 10px 10px 10px;
+			color: #720404;
+			font-style: italic;
+		}
+		
+		#formulaire
+		{
+			margin-top: 60px;
+			text-align: center;
+		}
+		
+		#boutons
+		{
+			margin-top: 5px;
+		}
+	</style>
 </head>
 <body>
-	<h1>Witchmod</h1>
+	<div id="page">
+		<div id="tete">
+			<h1><a href="index.html"><img src="illustrations/witchmod-logo.png" alt="Logo de witchmod" style="width:150px;"></a></h1>
 
-    <a href="index.html">Acceuil</a>
-	<a href="mods.html">Mods</a>
-	<a href="actualite.html">Actualité</a>
-	<a href="compte.html">Mon compte</a>
-	<a href="inscription-identification.html">Identification</a>
-	<a href="inscription-termes-utilisation.html">Termes d'utilisation</a>
-	<a href="contact.html">Contact</a>
-	
-	<h2>Mot de passe</h2>
-	
-	<form method="post" action="inscription-termes-utilisation.html">
-		<div>
-			<div>
-				<label for="email">Veuillez entrer votre E-mail:<br></label>
-				<input id="email" type="email" name="email" tabindex="1">
-			</div>
-			
-			<div>
-				<label for="mdp">Veuillez entrer un mot de passe :<br></label>
-				<input id="mdp" type="password" name="mdp" tabindex="2">
-			</div>
-			
-			<div>
-				<label for="verifiactionMdp">Veuillez confirmer un mot de passe :<br></label>
-				<input id="verifiactionMdp" type="password" name="verificationMdp" tabindex="3">
-			</div>
-			
-			<div>
-				<input type="button" name="precedentP2" value="Précedent" onclick="history.back(-1)" tabindex="4">
-				<input type="submit" name="suivantP2" value="Suivant" tabindex="5">
-			</div>
+			<ul id="menu">
+				<li><a href="index.html">Acceuil</a></li>
+				<li><a href="mods.html">Mods</a></li>
+				<li><a href="actualite.html">Actualité</a></li>
+				<li><a href="compte.html">Mon compte</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
 		</div>
-	</form>
-    
+		
+		<div id="contenu">
+			<h2>Mot de passe</h2>
+			
+			<form method="post" action="inscription-termes-utilisation.html">
+				<div id="formulaire">
+					<div id="email">
+						<label for="email">Veuillez entrer votre E-mail:<br></label>
+						<input id="email" type="email" name="email" tabindex="1">
+					</div>
+					
+					<div id="mdp">
+						<label for="mdp">Veuillez entrer un mot de passe :<br></label>
+						<input id="mdp" type="password" name="mdp" tabindex="2">
+					</div>
+					
+					<div id="verifiactionMdp">
+						<label for="verifiactionMdp">Veuillez confirmer un mot de passe :<br></label>
+						<input id="verifiactionMdp" type="password" name="verificationMdp" tabindex="3">
+					</div>
+					
+					<div id="boutons">
+						<input type="button" name="precedentP2" value="Précedent" onclick="history.back(-1)" tabindex="4">
+						<input type="submit" name="suivantP2" value="Suivant" tabindex="5">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 </body>
 </html>
