@@ -85,6 +85,42 @@
 		{
 			margin-top: 30px;
 		}
+		
+		#filDAriane
+		{
+			list-style: none;
+			padding: 10px 16px;
+			font-size: 15px;
+			color: #720404;
+		}
+		
+		#filDAriane li
+		{
+			display: inline;
+		}
+		
+		#filDAriane li+li:before 
+		{
+			padding: 8px;
+			color: black;
+			content: "|\00a0";
+		}
+		
+		#filDAriane li a
+		{
+			text-decoration: none;
+			color: #c2c7d1;
+		}
+		
+		#filDAriane li a:hover
+		{
+			color: #720404;
+		}
+		
+		h2, h3, #filDAriane li, a
+		{
+			font-family:Monotype Corsiva;
+		}
 	</style>
 </head>
 <body>
@@ -100,26 +136,31 @@
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 			
-			<div id="contenu">
-				<h2>Actualité</h2>
-				<div id="update">
-					<div id="update3">
-						<h3>25 février 2017</h3>
-						<p>Nouveau design</p>
-					</div>
-					
-					<div id="update2">
-						<h3>19 février 2017</h3>
-						<p>3 nouveaux mods ont été ajouté à la liste de mod.</p>
-					</div>
-					
-					<div id="update1">
-						<h3>15 février 2017</h3>
-						<p>Ouverture de Witchmod</p>
-					</div>
+			<ul id="filDAriane">
+				<li>Actualité</li>
+			</ul>
+		</div>
+		
+		<div id="contenu">
+			<h2>Actualité</h2>
+			<div id="update">
+				<div id="update3">
+					<h3>25 février 2017</h3>
+					<p>Nouveau design</p>
+				</div>
+				
+				<div id="update2">
+					<h3>19 février 2017</h3>
+					<p>3 nouveaux mods ont été ajouté à la liste de mod.</p>
+				</div>
+				
+				<div id="update1">
+					<h3>15 février 2017</h3>
+					<p>Ouverture de Witchmod</p>
 				</div>
 			</div>
 		</div>
+		
 	</div>
 </body>
 </html>

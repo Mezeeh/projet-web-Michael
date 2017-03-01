@@ -68,6 +68,42 @@
 		{
 			margin-top: 5px;
 		}
+		
+		#filDAriane
+		{
+			list-style: none;
+			padding: 10px 16px;
+			font-size: 15px;
+			color: #720404;
+		}
+		
+		#filDAriane li
+		{
+			display: inline;
+		}
+		
+		#filDAriane li+li:before 
+		{
+			padding: 8px;
+			color: black;
+			content: "|\00a0";
+		}
+		
+		#filDAriane li a
+		{
+			text-decoration: none;
+			color: #c2c7d1;
+		}
+		
+		#filDAriane li a:hover
+		{
+			color: #720404;
+		}
+		
+		h2, h3, #filDAriane li, a
+		{
+			font-family:Monotype Corsiva;
+		}
 	</style>
 </head>
 <body>
@@ -81,6 +117,13 @@
 				<li><a href="actualite.html">Actualité</a></li>
 				<li><a href="compte.html">Mon compte</a></li>
 				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			
+			<ul id="filDAriane">
+				<li><a href="compte.html">Mon compte</a></li>
+				<li><a href="inscription-identification.html">Identification</a></li>
+				<li><a href="inscription-mot-de-passe.html">Mot de passe</a></li>
+				<li>Termes d'utilisation</li>
 			</ul>
 		</div>
 		
