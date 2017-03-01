@@ -4,6 +4,32 @@
 	<meta charset="utf-8">
 	<title>Witchmod</title>
 	
+	<script>
+		function validerFormatEmail()
+		{
+			//alert('test');
+			
+			var champsEmail = document.getElementById("emailContact");
+			
+			//alert(champsEmail);
+			
+			//alert(champsEmail.value);
+			
+			var validateurEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			//alert(champsEmail.value.match(validateurEmail));
+			
+			while(! champsEmail.value.match(validateurEmail))
+			{
+				var cibleMessage = document.getElementById("email");
+				cibleMessage.innerHTML = "Le format de votre e-mail est invalide. Il doit contenir un '@' et un '.'. Veuillez corriger le champs puis cliquez sur Envoyer.";
+				cibleMessage.style.display = "block";
+				
+				return false;
+			}
+			return true;
+		}
+	</script>
+	
 	<style>
 		*
 		{
@@ -141,7 +167,7 @@
 		<div id="contenu">
 			<h2>Contact</h2>
 		
-			<form method="post" action="contact.html">
+			<form onsubmit="return validerFormatEmail()" method="post" action="contact.html">
 				<div id="formulaire">
 					<div id="nom">
 						<label for="nomContact">Nom</label>
@@ -150,7 +176,7 @@
 					
 					<div id="email">
 						<label for="emailContact">E-mail</label>
-						<input id="emailContact" type="email" name="emailContact" tabindex="2">
+						<input id="emailContact" type="text" name="emailContact" tabindex="2">
 					</div>
 					
 					<div id="sujet">
