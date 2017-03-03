@@ -63,7 +63,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			margin-top: 60px;
-			width: 10em
+			width: 10em;
 		}
 		
 		#suivant
@@ -107,9 +107,16 @@
 			font-family:Monotype Corsiva;
 		}
 		
-		#formulaire label
+		#id label, #prenom label, #nom label, #fete label
 		{
 			display:block;
+		}
+		
+		body
+		{
+			background-image: url(illustrations/arriere-plan.png);
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 	</style>
 </head>
@@ -138,31 +145,37 @@
 			<form method="post" action="inscription-mot-de-passe.html">
 				<div id="formulaire">
 					<div id="id">
-						<label for="nomUtilisateur">Veuillez entrer un nom d'utilisateur:<br></label>
+						<label for="nomUtilisateur">Veuillez entrer un nom d'utilisateur:</label>
 						<input id="nomUtilisateur" type="text" name="nomUtilisateur" tabindex="1">
 					</div>
 					
 					<div id="prenom">
-						<label for="prenom">Veuillez entrer votre prénom:<br></label>
+						<label for="prenom">Veuillez entrer votre prénom:</label>
 						<input id="prenom" type="text" name="prenom" tabindex="2">
 					</div>
 					
 					<div id="nom">
-						<label for="nom">Veuillez entrer votre nom:<br></label>
+						<label for="nom">Veuillez entrer votre nom:</label>
 						<input id="nom" type="text" name="nom" tabindex="3">
 					</div>
 					
 					<div id="genre">
-						<input id="genreHomme" type="radio" name="genre" value="homme" checked tabindex="4">
-						<label for="genreHomme">Homme<br></label>
-						<input id="genreFemme" type="radio" name="genre" value="femme" tabindex="5">
-						<label for="genreFemme">Femme<br></label>
-						<input id="genreAutre" type="radio" name="genre" value="autre" tabindex="6">
-						<label for="genreAutre">Autre<br></label>
+						<div id="homme">
+							<input id="genreHomme" type="radio" name="genre" value="homme" checked tabindex="4">
+							<label for="genreHomme">Homme</label>
+						</div>
+						<div id="femme">
+							<input id="genreFemme" type="radio" name="genre" value="femme" tabindex="5">
+							<label for="genreFemme">Femme</label>
+						</div>
+						<div id="autre">
+							<input id="genreAutre" type="radio" name="genre" value="autre" tabindex="6">
+							<label for="genreAutre">Autre</label>
+						</div>
 					</div>
 					
 					<div id="fete">
-						<label for="dateFete">Veuillez sélectionner votre anniversaire :<br></label>
+						<label for="dateFete">Veuillez sélectionner votre anniversaire :</label>
 						<input id="dateFete" type="date" name="dateFete" tabindex="7">
 					</div>
 					

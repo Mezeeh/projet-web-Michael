@@ -18,15 +18,33 @@
 			var validateurEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			//alert(champsEmail.value.match(validateurEmail));
 			
-			while(! champsEmail.value.match(validateurEmail))
+			if(!champsEmail.value.match(validateurEmail))
 			{
-				var cibleMessage = document.getElementById("email");
-				cibleMessage.innerHTML = "Le format de votre e-mail est invalide. Il doit contenir un '@' et un '.'. Veuillez corriger le champs puis cliquez sur Envoyer.";
+				var cibleMessage = document.getElementById("erreur");
+				var carreEmail = document.getElementById("email")
+				cibleMessage.innerHTML = "Le format de votre e-mail est invalide. Il doit contenir un '@' et finir par '.com' par exemple. Veuillez corriger le champs puis cliquez sur Envoyer.";
 				cibleMessage.style.display = "block";
-				
+				carreEmail.style.padding = "5px"
+				carreEmail.style.border = "solid 3px red"
 				return false;
 			}
 			return true;
+		}
+		
+		function afficherValeurChampsEmail(input, )
+		{
+			input.onblur = afficherValeurDefaut;
+			input.onfocus = function afficherValeurDefaut(){
+				if(this.value=='courriel@exemple.com'){
+					this.value='';
+				}
+			}
+			function effacer(){
+				else if(this.value==''){
+					this.value='courriel@exemple.com'
+				}
+			}
+			effacer();
 		}
 	</script>
 	
@@ -100,7 +118,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			margin-top: 60px;
-			width: 14em
+			width: 14em;
 		}
 		
 		#envoyer
@@ -144,6 +162,22 @@
 		{
 			font-family:Monotype Corsiva;
 		}
+		
+		body
+		{
+			background-image: url(illustrations/arriere-plan.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		
+		#erreur
+		{
+			display:none;
+			color: red;
+			margin-left: auto;
+			margin-right: auto;
+			width: 14em;
+		}
 	</style>
 </head>
 <body>
@@ -167,6 +201,8 @@
 		<div id="contenu">
 			<h2>Contact</h2>
 		
+			<div id="erreur"></div>
+			
 			<form onsubmit="return validerFormatEmail()" method="post" action="contact.html">
 				<div id="formulaire">
 					<div id="nom">
@@ -176,7 +212,7 @@
 					
 					<div id="email">
 						<label for="emailContact">E-mail</label>
-						<input id="emailContact" type="text" name="emailContact" tabindex="2">
+						<input id="emailContact" type="text" name="emailContact" value="courriel@exemple.com" onfocus="afficherValeurChampsEmail(this, 'focus')" onblur="afficherValeurChampsEmail(this, 'nonFocus')" tabindex="2">
 					</div>
 					
 					<div id="sujet">

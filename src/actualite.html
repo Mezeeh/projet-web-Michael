@@ -121,6 +121,36 @@
 		{
 			font-family:Monotype Corsiva;
 		}
+		
+		body
+		{
+			background-image: url(illustrations/arriere-plan.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		
+		#tableau table, #tableau th, #tableau td 
+		{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		
+		#tableau th, #tableau td 
+		{
+			padding: 15px;
+			text-align: center;
+		}
+		
+		#tableau
+		{
+			margin-left: 10px;
+			text-align:center;
+		}
+		
+		#tableau th, #tableau td:first-child
+		{
+			color:#720404;
+		}
 	</style>
 </head>
 <body>
@@ -141,32 +171,31 @@
 			</ul>
 		</div>
 		
-		<div id="contenu">
+		<div id="contenu">		
 			<h2>Actualité</h2>
-			<div id="update">
-				<div id="update3">
-					<h3>25 février 2017</h3>
-					<p>Nouveau design</p>
-				</div>
-				
-				<div id="update2">
-					<h3>19 février 2017</h3>
-					<p>3 nouveaux mods ont été ajouté à la liste de mod.</p>
-				</div>
-				
-				<div id="update1">
-					<h3>15 février 2017</h3>
-					<p>Ouverture de Witchmod</p>
-				</div>
-			</div>
-			
 			<div id="tableau">
 				<table>
-					<tr><td>Hi</td><td>Hi</td></tr>
+				  <tr>
+					<th>Date</th>
+					<th>Patie affecté</th> 
+					<th>Changements</th>
+				  </tr>
+				  <tr>
+					<td>25 février 2017</td>
+					<td colspan="2">Nouveau design</td>
+				  </tr>
+				  <tr>
+					<td>19 février 2017</td>
+					<td>Mods</td> 
+					<td>3 nouveaux mods ont été ajouté</td>
+				  </tr>
+				  <tr>
+					<td>15 février 2017</td>
+					<td colspan="2">Ouverture de Witchmod</td>
+				  </tr>
 				</table>
-			</div>
+			</div>	
 		</div>
-		
 	</div>
 </body>
 </html>
