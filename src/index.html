@@ -41,7 +41,7 @@
 			border-bottom: 2px solid #720404;
 		}
 		
-		#menu li a:focus, .active
+		#menu li a:focus, #menu li a.active
 		{
 			border-bottom: 2px solid #720404;
 		}
@@ -111,6 +111,19 @@
 		{
 			font-family:Monotype Corsiva;
 		}
+		
+		h1 span
+		{
+			display:none;
+		}
+		
+		h1
+		{
+			display:block;
+			width:200px;
+			height:100px;
+			background-image: url();
+		}
 	</style>
 </head>
 <body>
@@ -120,7 +133,7 @@
 			<h1><a href="index.html"><img src="illustrations/witchmod-logo.png" alt="Logo de witchmod" style="width:150px;"></a></h1>
 			
 			<ul id="menu">
-				<li><a href="index.html">Acceuil</a></li>
+				<li><a href="index.html" class="active">Accueil</a></li>
 				<li><a href="mods.html">Mods</a></li>
 				<li><a href="actualite.html">Actualité</a></li>
 				<li><a href="compte.html">Mon compte</a></li>
@@ -128,12 +141,12 @@
 			</ul>
 			
 			<ul id="filDAriane">
-				<li>Acceuil</li>
+				<li>Accueil</li>
 			</ul>
 		</div>
 		
 		<div id="contenu">
-			<h2>Acceuil</h2>
+			<h2>Accueil</h2>
 			
 			<div id="presentation">
 				<img src="illustrations/witchmod-logo.png" alt="Logo de witchmod">

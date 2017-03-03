@@ -41,7 +41,7 @@
 			border-bottom: 2px solid #720404;
 		}
 		
-		#menu li a:focus, .active
+		#menu li a:focus, #menu li a.active
 		{
 			border-bottom: 2px solid #720404;
 		}
@@ -122,6 +122,11 @@
 		{
 			font-family:Monotype Corsiva;
 		}
+		
+		#formulaire label
+		{
+			display:block;
+		}
 	</style>
 </head>
 <body>
@@ -130,10 +135,10 @@
 			<h1><a href="index.html"><img src="illustrations/witchmod-logo.png" alt="Logo de witchmod" style="width:150px;"></a></h1>
 
 			<ul id="menu">
-				<li><a href="index.html">Acceuil</a></li>
+				<li><a href="index.html">Accueil</a></li>
 				<li><a href="mods.html">Mods</a></li>
 				<li><a href="actualite.html">Actualité</a></li>
-				<li><a href="compte.html">Mon compte</a></li>
+				<li><a href="compte.html" class="active">Mon compte</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 			
@@ -148,12 +153,12 @@
 			<form method="post" action="index.html">
 				<div id="formulaire">
 					<div id="id">
-						<label for="id">Nom d'utilisateur:<br></label>
+						<label for="id">Nom d'utilisateur:</label>
 						<input id="id" type="text" name="id" tabindex="1">
 					</div>
 					
 					<div id="psswrd">
-						<label for="psswrd">Mot de passe:<br></label>
+						<label for="psswrd">Mot de passe:</label>
 						<input id="psswrd" type="password" name="psswrd" tabindex="2">
 					</div>
 					
