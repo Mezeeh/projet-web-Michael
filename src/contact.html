@@ -15,7 +15,21 @@
 			
 			//alert(champsEmail.value);
 			
-			var validateurEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			/*([A-Za-z0-9_\-\.]) 
+			A à Z en majuscule ou en minuscule
+			Chiffre de 0 à 9 
+			Accepte les "_", "-" et les points
+			======================================
+			+\@
+			Doit contenir un "@"
+			======================================
+			+\.
+			Doit contenir un "."
+			======================================
+			([A-Za-z]{2,4})
+			A à Z en majuscule ou en minuscule
+			formant un mot de 2 à 4 chiffre*/
+			var validateurEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 			//alert(champsEmail.value.match(validateurEmail));
 			
 			if(!champsEmail.value.match(validateurEmail))
@@ -31,21 +45,39 @@
 			return true;
 		}
 		
-		/*function afficherValeurChampsEmail(input, )
+		function effacerValeurChampsEmail()
 		{
-			input.onblur = afficherValeurDefaut;
-			input.onfocus = function afficherValeurDefaut(){
-				if(this.value=='courriel@exemple.com'){
-					this.value='';
-				}
+			//alert('test');
+			
+			var valeurChampsEmail = document.getElementById("emailContact").value;
+			
+			//alert(valeurChampsEmail);
+			
+			var valeurChampsEmailDefaut = "courriel@exemple.com";
+			
+			if(valeurChampsEmail.match(valeurChampsEmailDefaut))
+			{
+				//alert('1 2 test');
+				document.getElementById("emailContact").value="";
 			}
-			function effacer(){
-				else if(this.value==''){
-					this.value='courriel@exemple.com'
-				}
+		}
+		
+		function afficherValeurChampsEmail()
+		{
+			//alert('test');
+			
+			var valeurChampsEmail = document.getElementById("emailContact").value;
+			
+			//alert(valeurChampsEmail);
+			
+			var valeurChampsEmailDefaut = "courriel@exemple.com";
+			
+			if(valeurChampsEmail=="")
+			{
+				//alert('1 2 test');
+				document.getElementById("emailContact").value=valeurChampsEmailDefaut;
 			}
-			effacer();
-		}*/
+		}
 	</script>
 	
 	<style>
@@ -213,7 +245,7 @@
 					
 					<div id="email">
 						<label for="emailContact">E-mail</label>
-						<input id="emailContact" type="text" name="emailContact" value="courriel@exemple.com" onfocus="afficherValeurChampsEmail(this, 'focus')" onblur="afficherValeurChampsEmail(this, 'nonFocus')" tabindex="2">
+						<input id="emailContact" type="text" name="emailContact" value="courriel@exemple.com" onfocus="effacerValeurChampsEmail()" onblur="afficherValeurChampsEmail()" tabindex="2">
 					</div>
 					
 					<div id="sujet">
