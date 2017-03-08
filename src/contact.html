@@ -49,16 +49,16 @@
 		{
 			//alert('test');
 			
-			var valeurChampsEmail = document.getElementById("emailContact").value;
+			var valeurChampsEmail = document.getElementById("emailContact");
 			
 			//alert(valeurChampsEmail);
 			
 			var valeurChampsEmailDefaut = "courriel@exemple.com";
 			
-			if(valeurChampsEmail.match(valeurChampsEmailDefaut))
+			if(valeurChampsEmail.value.match(valeurChampsEmailDefaut))
 			{
 				//alert('1 2 test');
-				document.getElementById("emailContact").value="";
+				valeurChampsEmail.value="";
 			}
 		}
 		
@@ -66,16 +66,16 @@
 		{
 			//alert('test');
 			
-			var valeurChampsEmail = document.getElementById("emailContact").value;
+			var valeurChampsEmail = document.getElementById("emailContact");
 			
 			//alert(valeurChampsEmail);
 			
 			var valeurChampsEmailDefaut = "courriel@exemple.com";
 			
-			if(valeurChampsEmail=="")
+			if(valeurChampsEmail.value=="")
 			{
 				//alert('1 2 test');
-				document.getElementById("emailContact").value=valeurChampsEmailDefaut;
+				valeurChampsEmail.value=valeurChampsEmailDefaut;
 			}
 		}
 	</script>
