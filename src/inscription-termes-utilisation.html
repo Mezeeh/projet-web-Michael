@@ -4,164 +4,8 @@
 	<meta charset="utf-8">
 	<title>Witchmod</title>
 	
-	<style>
-		*
-		{
-			padding:0px;
-			margin:0px;
-			text-decoration:none;
-			font-family:Constantia;
-		}
-		
-		h1 a img
-		{
-			margin: 10px;
-		}
-		
-		#menu
-		{
-			font-size : 24px;
-			border-bottom: 2px solid #c2c7d1;
-		}
-		
-		#menu li
-		{
-			display:inline-table;
-		}
-		
-		#menu li a
-		{
-			text-decoration : none;
-			color : black;
-            padding-left: 25px;
-            margin-right: 25px;
-		}
-		
-		#menu li a:hover
-		{
-			border-bottom: 2px solid #720404;
-		}
-		
-		#menu li a:focus, #menu li a.active
-		{
-			border-bottom: 2px solid #720404;
-		}
-		
-		#menu li:first-child
-		{
-			margin-left:10px;
-		}
-		
-        #menu .acceuil a 
-        { 
-            background:url(decorations/icone-acceuil.png) no-repeat; 
-        }
-        
-        #menu .articles a
-        {
-            background:url(decorations/icone-articles.png) no-repeat;
-        }
-        
-        #menu .actualite a
-        {
-            background:url(decorations/icone-actualite.png) no-repeat;
-        }
-        
-        #menu .compte a
-        {
-            background:url(decorations/icone-compte.png) no-repeat;
-        }
-        
-        #menu .contact a
-        {
-            background:url(decorations/icone-contact.png) no-repeat;
-        }
-		
-		h2
-		{
-			margin: 10px 10px 10px 10px;
-			color: #720404;
-			font-style: italic;
-		}
-		
-		#formulaire
-		{
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 60px;
-			width: 35em;
-			text-align: center;
-		}
-		
-		#boutons
-		{
-			margin-top: 5px;
-		}
-		
-		#filDAriane
-		{
-			list-style: none;
-			padding: 10px 16px;
-			font-size: 15px;
-			color: #720404;
-		}
-		
-		#filDAriane li
-		{
-			display: inline;
-		}
-		
-		#filDAriane li+li:before 
-		{
-			padding: 8px;
-			color: black;
-			content: "|\00a0";
-		}
-		
-		#filDAriane li a
-		{
-			text-decoration: none;
-			color: #c2c7d1;
-		}
-		
-		#filDAriane li a:hover
-		{
-			color: #720404;
-		}
-		
-		h2, h3, #filDAriane li, a
-		{
-			font-family:Monotype Corsiva;
-		}
-		
-		body
-		{
-			background-image: url(decorations/arriere-plan.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-        
-        h1 span
-        {
-            opacity: 0;
-        }
-        
-        h1
-        {
-            margin-top: 15px;
-            margin-left: 15px;
-            width: 250px;
-            height: 48px;
-        }
-        
-        h1 a
-        {
-            display: inline-block;
-            width: 250px;
-            height: 48px;
-            background-image: url(decorations/witchmod-logo.png);
-        }
-	</style>
+	<link rel="stylesheet" type="text/css" href="feuille-de-style.css">
+	
 </head>
 <body>
 	<div id="page">
@@ -176,7 +20,7 @@
 				<li class="contact"><a href="contact.html">Contact</a></li>
 			</ul>
 			
-			<ul id="filDAriane">
+			<ul id="fil-d-ariane">
 				<li><a href="index.html">Acceuil</a></li>
 				<li><a href="compte.html">Mon compte</a></li>
 				<li><a href="inscription-identification.html">Identification</a></li>
@@ -189,8 +33,8 @@
 			<h2>Termes d'utilisation</h2>
 			
 			<form method="post" action="index.html">
-				<div id="formulaire">	
-					<div id="termes">
+				<div id="formulaire-termes-d-utilisation">	
+					<div class="termes">
 						<textarea id="termesUtil" name="termesUtil" rows="30" cols="100" readonly="readonly" tabindex="1">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at lorem ac leo faucibus molestie non nec magna. Aliquam non mauris rhoncus, mollis dui porta, convallis purus. Aenean sodales felis a velit cursus, nec pellentesque est sagittis. Donec faucibus at quam vitae vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut commodo, dolor vel ornare dignissim, erat magna accumsan sem, eget mattis massa dolor a mauris. Donec sit amet augue ac arcu mattis condimentum. Pellentesque eget arcu suscipit, facilisis urna in, consectetur ipsum. Cras risus libero, consectetur nec ipsum eget, bibendum malesuada nisi. Phasellus eget placerat elit. Nam et urna vestibulum, molestie ante id, placerat purus. Cras at erat tellus. Mauris ultricies congue commodo. Quisque non ullamcorper arcu. Sed quam felis, vestibulum vel lectus eget, imperdiet dapibus quam.
 
@@ -204,12 +48,12 @@ Aliquam lacinia rutrum neque sit amet congue. Suspendisse at sagittis diam, et m
 						</textarea>
 					</div>
 					
-					<div id="case">
+					<div class="case">
 						<label for="accptTermesUtil">J'ai lu et accpete les termes d'utilisation ci-haut.</label>
 						<input id="accptTermesUtil" type="checkbox" name="acceptationTermesUtilisation" tabindex="2">
 					</div>
 					
-					<div id="boutons">
+					<div class="boutons">
 						<input type="button" name="precedentP3" value="Précedent" onclick="history.back(-1)" tabindex="3">
 						<input type="submit" name="enregistrer" value="Enregistrer" tabindex="4">
 					</div>

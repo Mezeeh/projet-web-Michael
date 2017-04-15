@@ -4,217 +4,8 @@
 	<meta charset="utf-8">
 	<title>Witchmod</title>
 	
-	<style>
-		*
-		{
-			padding:0px;
-			margin:0px;
-			text-decoration:none;
-			font-family:Constantia;
-		}
-		
-		h1 a img
-		{
-			margin: 10px;
-		}
-		
-		#menu
-		{
-			font-size : 24px;
-			border-bottom: 2px solid #c2c7d1;
-		}
-		
-		#menu li
-		{
-			display:inline-table;
-		}
-		
-		#menu li a
-		{
-			text-decoration : none;
-			color : black;
-            padding-left: 25px;
-            margin-right: 25px;
-		}
-		
-		#menu li a:hover
-		{
-			border-bottom: 2px solid #720404;
-		}
-		
-		#menu li a:focus, #menu li a.active
-		{
-			border-bottom: 2px solid #720404;
-		}
-		
-		#menu li:first-child
-		{
-			margin-left:10px;
-		}
-		
-        #menu .acceuil a 
-        { 
-            background:url(decorations/icone-acceuil.png) no-repeat; 
-        }
-        
-        #menu .articles a
-        {
-            background:url(decorations/icone-articles.png) no-repeat;
-        }
-        
-        #menu .actualite a
-        {
-            background:url(decorations/icone-actualite.png) no-repeat;
-        }
-        
-        #menu .compte a
-        {
-            background:url(decorations/icone-compte.png) no-repeat;
-        }
-        
-        #menu .contact a
-        {
-            background:url(decorations/icone-contact.png) no-repeat;
-        }
-		
-		h2
-		{
-			margin: 10px 10px 10px 10px;
-			color: #720404;
-			font-style: italic;
-		}
-		
-		#formulaire
-		{
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 60px;
-			width: 10em;
-		}
-		
-		#suivant
-		{
-			margin-top: 5px;
-		}
-		
-		#fil-d-ariane
-		{
-			list-style: none;
-			padding: 10px 16px;
-			font-size: 15px;
-			color: #720404;
-		}
-		
-		#fil-d-ariane li
-		{
-			display: inline;
-		}
-		
-		#fil-d-ariane li+li:before 
-		{
-			padding: 8px;
-			color: black;
-			content: "|\00a0";
-		}
-		
-		#fil-d-ariane li a
-		{
-			text-decoration: none;
-			color: #c2c7d1;
-		}
-		
-		#fil-d-ariane li a:hover
-		{
-			color: #720404;
-		}
-		
-		h2, h3, #fil-d-ariane li, a
-		{
-			font-family:Monotype Corsiva;
-		}
-		
-		#id label, #prenom label, #nom label, #fete label
-		{
-			display:block;
-		}
-		
-		body
-		{
-			background-image: url(decorations/arriere-plan.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-        
-        h1 span
-        {
-            opacity: 0;
-        }
-        
-        h1
-        {
-            margin-top: 15px;
-            margin-left: 15px;
-            width: 250px;
-            height: 48px;
-        }
-        
-        h1 a
-        {
-            display: inline-block;
-            width: 250px;
-            height: 48px;
-            background-image: url(decorations/witchmod-logo.png);
-        }
-        
-       
-		#genre input
-		{
-		    -webkit-appearance:none;
-			-moz-appearance:none;
-			appearance:none;
-		}
-		
-		
-		#genre label.selecteur-genre
-		{
-		    display:inline-block;
-			width:50px;
-			height:50px;
-			cursor:pointer;
-			opacity:0.5;
-		}
-		
-		#genre label.selecteur-genre span
-		{
-			display:none;
-		}
-
-		#genre label#libelle-femme
-		{
-			background-image:url(decorations/venus-symbole.png);
-		}
-		#genre label#libelle-homme
-		{
-			background-image:url(decorations/mars-symbole.png);
-		}
-		
-		
-		#genre label.selecteur-genre:hover
-		{
-			opacity:1;
-		}
-		
-		
-		#genre input:checked+label.selecteur-genre
-		{
-			opacity:1;
-		}
-        
-		#genre input:active+label.selecteur-genre
-		{
-			opacity:1;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="feuille-de-style.css">
+	
 </head>
 <body>
 	<div id="page">
@@ -240,18 +31,18 @@
 			<h2>Identification</h2>
 			
 			<form method="post" action="inscription-mot-de-passe.html">
-				<div id="formulaire">
-					<div id="id">
-						<label for="nomUtilisateur">Veuillez entrer un nom d'utilisateur:</label>
-						<input id="nomUtilisateur" type="text" name="nomUtilisateur" tabindex="1">
+				<div id="formulaire-identification">
+					<div class="identifient">
+						<label for="nom-d-utilisateur">Veuillez entrer un nom d'utilisateur:</label>
+						<input id="nom-d-utilisateur" type="text" name="nom-d-utilisateur" tabindex="1">
 					</div>
 					
-					<div id="prenom">
+					<div class="prenom">
 						<label for="prenom">Veuillez entrer votre prénom:</label>
 						<input id="prenom" type="text" name="prenom" tabindex="2">
 					</div>
 					
-					<div id="nom">
+					<div class="nom">
 						<label for="nom">Veuillez entrer votre nom:</label>
 						<input id="nom" type="text" name="nom" tabindex="3">
 					</div>
@@ -263,13 +54,13 @@
                         <label id="libelle-femme" for="femme" class="selecteur-genre"><span>Femme</span></label>
 					</div>
 					
-					<div id="fete">
+					<div class="date-fete">
 						<label for="date-fete">Veuillez sélectionner votre anniversaire :</label>
 						<input id="date-fete" type="date" name="date-fete" tabindex="7">
 					</div>
 					
-					<div id="suivant">
-						<input type="submit" name="suivantP1" value="Suivant" tabindex="8">
+					<div class="suivant">
+						<input type="submit" name="suivant" value="Suivant" tabindex="8">
 					</div>
 				</div>
 			</form>
