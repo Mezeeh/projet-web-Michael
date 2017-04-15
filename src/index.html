@@ -33,7 +33,8 @@
 		{
 			text-decoration : none;
 			color : black;
-			margin : 4px;
+            padding-left: 25px;
+            margin-right: 25px;
 		}
 		
 		#menu li a:hover
@@ -51,6 +52,31 @@
 			margin-left:10px;
 		}
 		
+        #menu .acceuil a 
+        { 
+            background:url(decorations/icone-acceuil.png) no-repeat; 
+        }
+        
+        #menu .articles a
+        {
+            background:url(decorations/icone-articles.png) no-repeat;
+        }
+        
+        #menu .actualite a
+        {
+            background:url(decorations/icone-actualite.png) no-repeat;
+        }
+        
+        #menu .compte a
+        {
+            background:url(decorations/icone-compte.png) no-repeat;
+        }
+        
+        #menu .contact a
+        {
+            background:url(decorations/icone-contact.png) no-repeat;
+        }
+        
 		h2
 		{
 			margin: 10px 10px 10px 10px;
@@ -64,7 +90,7 @@
 			margin-right: 15px;
 		}
 		
-		#presentation, #objectifs
+		.presentation
 		{
 			margin-bottom: 30px;
 		}
@@ -76,36 +102,6 @@
 			color: #720404;
 		}
 		
-		#filDAriane
-		{
-			list-style: none;
-			padding: 10px 16px;
-			font-size: 15px;
-			color: #720404;
-		}
-		
-		#filDAriane li
-		{
-			display: inline;
-		}
-		
-		#filDAriane li+li:before 
-		{
-			padding: 8px;
-			color: black;
-			content: "|\00a0";
-		}
-		
-		#filDAriane li a
-		{
-			text-decoration: none;
-			color: #c2c7d1;
-		}
-		
-		#filDAriane li a:hover
-		{
-			color: #720404;
-		}
 		
 		h2, h3, #filDAriane li, a
 		{
@@ -139,6 +135,16 @@
             height: 48px;
             background-image: url(decorations/witchmod-logo.png);
         }
+        
+        .suivre
+        {
+            text-align: center;
+        }
+        
+        .suivre h3
+        {
+            font-size: 40px;
+        }
 	</style>
 </head>
 <body>
@@ -148,40 +154,49 @@
 			<h1><a href="index.html"><span>Witchmod</span></a></h1>
 			
 			<ul id="menu">
-				<li><a href="index.html" class="active">Acceuil</a></li>
-				<li><a href="mods.html">Mods</a></li>
-				<li><a href="actualite.html">Actualité</a></li>
-				<li><a href="compte.html">Mon compte</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li class="acceuil"><a href="index.html" class="active">Acceuil</a></li>
+				<li class="articles"><a href="mods.html">Mods</a></li>
+				<li class="actualite"><a href="actualite.html">Actualité</a></li>
+				<li class="compte"><a href="compte.html">Mon compte</a></li>
+				<li class="contact"><a href="contact.html">Contact</a></li>
 			</ul>
 			
-			<ul id="filDAriane">
-				<li>Accueil</li>
-			</ul>
 		</div>
 		
 		<div id="contenu">
 			<h2>Accueil</h2>
 			
-			<div id="presentation">
+			<div class="presentation">
 				<img src="illustrations/witchmod-logo.png" alt="Logo de witchmod">
 				<h3>Qu'est-ce que Witchmod ?</h3>
 				<p>Witchmod est un site communautaire qui fournie une plate-forme pour les créateurs de mods du jeux Witcher 3 : The Wild Hunt de partagé leurs créations et pour les autres a utiliser dans leurs jeux respectifs.</p>
 			</div>
-			
-			<div id="objectifs">
-				<img src="" alt="">
-				<h3>Objectifs futurs</h3>
-				<p>- Ajouter des fonctionnalités au site</p>
-				<p>- Améliorer le design</p>
-				<p>- Augmenter la quantité de mods pour Witcher 3</p>
-				<p>- Ajouter une catégorie pour les anciens opus de la série</p>
-			</div>
-			
-			<div id="pourquoi">
-				<img src="illustrations/acceuil-pourquoi.png" alt="Pourquoi ?" style="width:200px;">
-				<p>Simplement pour rassembler la communauté de joueurs et de moddeurs de Witcher 3 sur un seul un même site afin de rendre la tâche de modder le jeu plus facile et agréable.</p>
-			</div>
+            
+            <div class="objectifs-futurs">
+                <h3>Objectifs future</h3>
+                <p>1- Git gud</p>
+                <p>2- Git moar gud</p>
+                <p>3- Finir à temps</p>
+                <p>4- Yolo</p>
+                <p>5- is</p>
+                <p>6- the</p>
+                <p>7- new</p>
+                <p>8- Carpe</p>
+                <p>9- diem</p>
+
+            </div>
+            
+            <div class="suivre">
+                <h3>Suivez-nous !</h3>
+                
+                <a href="http://store.steampowered.com/?l=french"><img src="illustrations/logo-steam.png"></a>
+                
+                <a href="https://www.reddit.com/"><img src="illustrations/logo-reddit.png"></a>
+                
+                <a href="https://www.youtube.com/"><img src="illustrations/logo-youtube.png"></a>
+                
+                <a href="https://www.twitter.com/"><img src="illustrations/logo-twitter.png"></a>
+            </div>
 		</div>
 	</div>
 	
