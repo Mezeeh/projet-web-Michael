@@ -58,27 +58,13 @@
 			font-style: italic;
 		}
 		
-		#contenu
+		#liste-mods
 		{
 			margin-left: 15px;
 			margin-right: 15px;
 		}
 		
-		#contenu a
-		{
-			color: #720404;
-			font-size: 25px;
-		}
-		
-		#mod1, #mod2, #mod3
-		{
-			width: 360px;
-			border: 1px solid #c2c7d1;
-			padding: 15px;
-			margin: 15px;
-		}
-		
-		#filDAriane
+		#fil-d-ariane
 		{
 			list-style: none;
 			padding: 10px 16px;
@@ -86,30 +72,30 @@
 			color: #720404;
 		}
 		
-		#filDAriane li
+		#fil-d-ariane li
 		{
 			display: inline;
 		}
 		
-		#filDAriane li+li:before 
+		#fil-d-ariane li+li:before 
 		{
 			padding: 8px;
 			color: black;
 			content: "|\00a0";
 		}
 		
-		#filDAriane li a
+		#fil-d-ariane li a
 		{
 			text-decoration: none;
 			color: #c2c7d1;
 		}
 		
-		#filDAriane li a:hover
+		#fil-d-ariane li a:hover
 		{
 			color: #720404;
 		}
 		
-		h2, h3, #filDAriane li, a
+		h2, h3, #fil-d-ariane li, a
 		{
 			font-family:Monotype Corsiva;
 		}
@@ -141,6 +127,53 @@
             height: 48px;
             background-image: url(decorations/witchmod-logo.png);
         }
+        
+        .mod
+        {
+            float: left;
+            position: relative;
+            height: 250px;
+            width: 254px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+        
+        .mod img
+        {
+            border: solid 2px black;
+            position: absolute;
+            width: 250px;
+            height: 150px;
+        }
+        
+        .mod h3
+        {
+           margin-top: 156px;
+        }
+        
+        #lien
+        {
+            position: absolute;
+            margin-top: 156px;
+        }
+      
+        .mod a
+        {
+            color: #720404;
+        }
+        
+        .mod a:hover
+        {
+            text-decoration: underline;
+        }
+        
+        .test
+        {
+            display:inline;
+            position: relative;
+            float: none
+        }
+        
 	</style>
 	
 </head>
@@ -157,29 +190,58 @@
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 			
-			<ul id="filDAriane">
+			<ul id="fil-d-ariane">
 				<li><a href="index.html">Acceuil</a></li>
 				<li>Mods</li>
 			</ul>
 		</div>
 		
-		<div id="contenu">
+		<div id="liste-mod">
 			<h2>Mods</h2>
+            
+            <div class="test">
+                <input type="text" name="recherche" class="recherche" placeholder="Rerchercher...">
+
+                <select name="trieur" class="trieur">
+                    <option>Plus téléchargés</option>
+                    <option>Plus récents</option>                
+                    <option>Plus ancients</option>
+                    <option>Populaires</option>
+                </select>
+            </div>
 			
-			<div id="mod1">
-				<a href="mod-anduril.html">Andúril la « Flamme de l'Ouest »</a>
-				<p>Andúril la « Flamme de l'Ouest » est un mod qui ajoute la légendaire lame de Le Seigneur des anneaux : Le Retour du roi au jeu.</p>
-			</div>	
-			
-			<div id="mod2">
-				<a href="mod-nightmare.html">Nightmare!</a>
-				<p>Nightmare! est un mod qui ajoute un nouveau niveau de difficulté au jeu.</p>
-			</div>	
-			
-			<div id="mod3">
-				<a href="mod-temperature-realiste.html">Température réaliste</a>
-				<p>Température réaliste est un mod qui ajoute des nouveaux climats.</p>
-			</div>
+            <div class="mod">
+                <a href="mod-anduril.html">
+                    <img src="illustrations/mod-narsil.jpg" alt="Narsil avant de devenir Andúril" title="Narsil avant de devenir Andúril">
+                </a>
+                
+                <a href="mod-anduril.html"><h3>Andúril la « Flamme de l'Ouest »</h3></a>
+                
+                <p>Andúril la « Flamme de l'Ouest » est un mod qui ajoute la légendaire...</p>
+                <p>par <a href="index.html">Cerann</a> le 2015-11-12</p>
+            </div>
+           
+            <div class="mod">
+                 <a href="mod-nightmare.html">
+                    <img src="illustrations/mod-nightmare.png" alt="Difficulté nightmare, DOOM original" title="Difficulté nightmare, DOOM original">
+                </a>
+                
+                <a href="mod-nightmare.html"><h3>Nightmare!</h3></a>
+                
+                <p>Nightmare! est un mod qui ajoute un nouveau niveau de difficulté...</p>
+                <p>par <a href="index.html">Eowaven</a> le 2016-08-05</p>
+            </div>
+            
+            <div class="mod">
+                <a href="mod-temperature-realiste.html">
+                    <img src="illustrations/mod-temperature-realiste.jpg" alt="Tournade en noir et blanc" title="Tournade en noir et blanc">
+                </a>
+                
+                <a href="mod-temperature-realiste.html"><h3>Température réaliste</h3></a>
+                
+                <p>Température réaliste est un mod qui ajoute des nouveaux climats.</p>
+                <p>par <a href="index.html">Oluria</a> le 2017-01-23</p>     
+            </div>
 		</div>
 	</div>
 </body>
