@@ -300,7 +300,7 @@ h2, h3, #fil-d-ariane li, a
 	text-align: center;
 }
 		
-.nom, #email, .sujet, .message, .envoyer
+.nom-contact, #email, .sujet, .message, .envoyer
 {
 	margin-bottom: 3px;
 }
