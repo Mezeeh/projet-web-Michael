@@ -5,9 +5,11 @@
 	<title>Witchmod</title>
 	
 	<link rel="stylesheet" type="text/css" href="feuille-de-style.css">
+    
+    <script type="text/javascript" src="mes-scripts.js"></script> 
 	
 </head>
-<body>
+<body onload="afficherInfobulles();">
 	<div id="page">
 		<div id="tete">
 			<h1><a href="index.html"><span>Witchmod</span></a></h1>
@@ -29,7 +31,7 @@
 	
 		<div id="contenu">
 			<h2>Identification</h2>
-			
+            
 			<form method="post" action="inscription-mot-de-passe.html">
 				<div id="formulaire-identification">
 					<div class="identifient">
@@ -48,6 +50,7 @@
 					</div>
 					
 					<div id="genre">
+                        <div id="infobulle-genre"></div>
 						<input type="radio" id="homme" name="sexe" value="homme"/>
                         <label id="libelle-homme" for="homme" class="selecteur-genre"><span>Homme</span></label>			
                         <input type="radio" id="femme" name="sexe" value="femme"/>
