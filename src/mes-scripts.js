@@ -23,14 +23,14 @@ function changerLiensSociauxPourImage()
 
 function afficherInfobulles()
 {
-	var champsGenre = document.getElementById('genre');
-	var champsInfobulleGenre = document.getElementById('infobulle-genre');
-
-	messageInfoBulles = "Choississez votre sexe. Homme (gauche) ou femme (droite).";
+	champsGenre = document.getElementById('genre');
+	champsInfobulleGenre = document.getElementById('infobulle-genre');
+	champsNomUtilisateur = document.getElementById('label-nom-d-utilisateur');
+	champsInfobulleNomUtilisateur = document.getElementById('infobulle-nom-d-utilisateur');
 	
 	champsGenre.onmouseover = function()
 							  {
-								champsInfobulleGenre.innerHTML = messageInfoBulles;
+								champsInfobulleGenre.innerHTML = "Choississez votre sexe. Homme (gauche) ou femme (droite).";
 								champsInfobulleGenre.style.width = "256px"
 								champsInfobulleGenre.style.display = "block";
 								champsInfobulleGenre.style.padding = "6px";
@@ -40,11 +40,31 @@ function afficherInfobulles()
 								champsInfobulleGenre.style.color = "black";
 								champsInfobulleGenre.style.textAlign = "center";
 								champsInfobulleGenre.style.position = "absolute";
-								champsInfobulleGenre.style.marginLeft = "150px";
+								champsInfobulleGenre.style.marginLeft = "175px";
 							  };
 
    champsGenre.onmouseout = function()
 							{
 								champsInfobulleGenre.style.display = "none";
+							};
+							
+	champsNomUtilisateur.onmouseover = function()
+							  {
+								champsInfobulleNomUtilisateur.innerHTML = "Le nom d'utilisateur ne doit pas comporter des symboles spéciaux (!@#$%?&*).";
+								champsInfobulleNomUtilisateur.style.width = "256px"
+								champsInfobulleNomUtilisateur.style.display = "block";
+								champsInfobulleNomUtilisateur.style.padding = "6px";
+								champsInfobulleNomUtilisateur.style.border = "1px solid #720404";
+								champsInfobulleNomUtilisateur.style.borderRadius = "15px";
+								champsInfobulleNomUtilisateur.style.backgroundColor = "white";
+								champsInfobulleNomUtilisateur.style.color = "black";
+								champsInfobulleNomUtilisateur.style.textAlign = "center";
+								champsInfobulleNomUtilisateur.style.position = "absolute";
+								champsInfobulleNomUtilisateur.style.marginLeft = "175px";
+							  };
+
+   champsNomUtilisateur.onmouseout = function()
+							{
+								champsInfobulleNomUtilisateur.style.display = "none";
 							};
 }
