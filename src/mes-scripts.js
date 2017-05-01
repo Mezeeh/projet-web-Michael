@@ -1,3 +1,77 @@
+function validerFormatEmail()
+{
+    //alert('test');
+
+    var champsEmail = document.getElementById("emailContact");
+
+    //alert(champsEmail);
+
+    //alert(champsEmail.value);
+
+    /*([A-Za-z0-9_\-\.]) 
+    A à Z en majuscule ou en minuscule
+    Chiffre de 0 à 9 
+    Accepte les "_", "-" et les points
+    ======================================
+    +\@
+    Doit contenir un "@"
+    ======================================
+    +\.
+    Doit contenir un "."
+    ======================================
+    ([A-Za-z]{2,4})
+    A à Z en majuscule ou en minuscule
+    formant un mot de 2 à 4 chiffre*/
+    var validateurEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    //alert(champsEmail.value.match(validateurEmail));
+
+    if(!champsEmail.value.match(validateurEmail))
+    {
+        var cibleMessage = document.getElementById("erreur");
+        var carreEmail = document.getElementById("email")
+        cibleMessage.innerHTML = "Le format de votre e-mail est invalide. Il doit contenir un '@' et finir par '.com' par exemple. Veuillez corriger le champs puis cliquez sur Envoyer.";
+        cibleMessage.style.display = "block";
+        carreEmail.style.padding = "5px"
+        carreEmail.style.border = "solid 3px red"
+        return false;
+    }
+    return true;
+}
+
+function effacerValeurChampsEmail()
+{
+    //alert('test');
+
+    var valeurChampsEmail = document.getElementById("emailContact");
+
+    //alert(valeurChampsEmail);
+
+    var valeurChampsEmailDefaut = "courriel@exemple.com";
+
+    if(valeurChampsEmail.value.match(valeurChampsEmailDefaut))
+    {
+        //alert('1 2 test');
+        valeurChampsEmail.value="";
+    }
+}
+
+function afficherValeurChampsEmail()
+{
+    //alert('test');
+
+    var valeurChampsEmail = document.getElementById("emailContact");
+
+    //alert(valeurChampsEmail);
+
+    var valeurChampsEmailDefaut = "courriel@exemple.com";
+
+    if(valeurChampsEmail.value=="")
+    {
+        //alert('1 2 test');
+        valeurChampsEmail.value=valeurChampsEmailDefaut;
+    }
+}
+
 function changerLiensSociauxPourImage()
 {
 	var listeNomLiens = document.querySelectorAll("#liens-sociaux a span");
