@@ -223,16 +223,21 @@ h2, h3, #fil-d-ariane li, a
 
 .mod
 {
-	float: left;
+    float: left;
 	position: relative;
-	height: 250px;
 	width: 254px;
 	margin-bottom: 20px;
-	margin-left: 20px;
-    //background-color: aqua;
+	margin-left: 20px;  
 }
 
-.mod img
+.mod-apercu
+{
+	position: relative;
+	height: 215px;
+	width: 254px;
+}
+
+.mod-apercu img
 {
 	border: solid 2px black;
 	position: absolute;
@@ -240,38 +245,35 @@ h2, h3, #fil-d-ariane li, a
 	height: 150px;
 }
 
-.mod h3
+.mod-apercu h3
 {
    top: 156px;
     position: absolute;
-    //background-color: aquamarine;
 }
 
-.mod a
+.mod-apercu a
 {
 	color: #720404;
 }
 
-.mod a:hover
+.mod-apercu a:hover
 {
 	text-decoration: underline;
 }
 
-.mod p.description-page-article
+.mod-apercu p.description-page-article
 {
     position: absolute;
     top: 180px;
     left: 0px;
 }
 
-.mod p.auteur
+.mod-apercu p.auteur
 {
-    position: absolute;
-    bottom: 10px;
-    left: 0px;
+    
 }
 
-.mod a.bouton-developper
+.mod-apercu a.bouton-developper
 {
     position: absolute;
     right: 5px;
@@ -447,7 +449,7 @@ a.bouton-developper
     color: black;
 }
 
-.texte-cache
+.mod-detail
 {
     display: none;
 }
