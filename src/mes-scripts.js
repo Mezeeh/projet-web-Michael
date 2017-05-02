@@ -146,11 +146,17 @@ function afficherInfobulles()
 function etendreDescriptionMod(mod)
 {
     modSelectioner = mod.parentNode;
-    boutonDevelopper = document.getElementsByClassName('bouton-developper');
+    boutonDevelopper = modSelectioner.getElementsByClassName('bouton-developper')[0];
     fenetreAEtendre = document.getElementsByClassName('mod');
-    spanTexteCache = document.getElementsByClassName('texte-cache');
+    spanTexteCache = modSelectioner.getElementsByClassName('texte-cache')[0];
 
-    if(modSelectioner == fenetreAEtendre[0])
+    //alert(boutonDevelopper);
+    
+    spanTexteCache.style.display = (boutonDevelopper.innerHTML == '⮟') ? "inline-block" : "none";
+    //(boutonDevelopper.value == '⮟') ? spanTexteCache.style.display = "inline-block" : spanTexteCache.style.display = "none";
+    boutonDevelopper.innerHTML=(boutonDevelopper.innerHTML=='⮟') ? '⮝' : '⮟';
+    
+    /*if(modSelectioner == fenetreAEtendre[0])
     {
         (boutonDevelopper[0].value == '⮟') ? spanTexteCache[0].style.display = "inline-block" : spanTexteCache[0].style.display = "none";
         boutonDevelopper[0].value=boutonDevelopper[0].value=='⮟'?'⮝':'⮟';
@@ -164,5 +170,5 @@ function etendreDescriptionMod(mod)
     {
         (boutonDevelopper[2].value == '⮟') ? spanTexteCache[2].style.display = "inline-block" : spanTexteCache[2].style.display = "none";
         boutonDevelopper[2].value=boutonDevelopper[2].value=='⮟'?'⮝':'⮟';
-    }
+    }*/
 }
