@@ -6,6 +6,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="feuille-de-style.css">
 	
+    <script type="text/javascript" src="mes-scripts.js"></script>
+    
 	<style>
         .test
         {
@@ -16,6 +18,15 @@
             float:none;
         }
         
+        .mod
+        {
+            -moz-transition: height .5s;
+            -ms-transition: height .5s;
+            -o-transition: height .5s;
+            -webkit-transition: height .5s;
+            height: auto;
+            overflow: hidden;
+        }
 	</style>
 	
 </head>
@@ -53,13 +64,16 @@
             </div>-->
 			
             <div class="mod">
-                <a href="mod-anduril.html">
+                <a class="titre-mod" href="mod-anduril.html">
                     <img src="illustrations/mod-narsil.jpg" alt="Narsil avant de devenir Andúril" title="Narsil avant de devenir Andúril">
                 </a>
                 
-                <a href="mod-anduril.html"><h3>Andúril la « Flamme de l'Ouest »</h3></a>
+                <a class="titre-mod" href="mod-anduril.html"><h3>Andúril la « Flamme de l'Ouest »</h3></a>
                 
-                <p>Andúril la « Flamme de l'Ouest » est un mod qui ajoute la légendaire...</p>
+                <p>Andúril la « Flamme de l'Ouest » est un mod qui ajoute la lame <span class="texte-cache">précédement appelée Narsil qui a été brisé puis reforgé par Elrond pour Aragorn II Elessar dans le film Le Seigneur des anneaux : Le Retour du roi à Witcher 3.</span></p>
+                
+                <input type="button" value="⮟" class="bouton-developper" onclick="etendreDescriptionMod(this)">
+                
                 <p>par <a href="index.html">Cerann</a> le 2015-11-12</p>
             </div>
            
@@ -68,9 +82,12 @@
                     <img src="illustrations/mod-nightmare.png" alt="Difficulté nightmare, DOOM original" title="Difficulté nightmare, DOOM original">
                 </a>
                 
-                <a href="mod-nightmare.html"><h3>Nightmare!</h3></a>
+                <a class="titre-mod" href="mod-nightmare.html"><h3>Nightmare!</h3></a>
                 
-                <p>Nightmare! est un mod qui ajoute un nouveau niveau de difficulté...</p>
+                <p>Nightmare! est un mod qui ajoute un nouveau niveau de difficulté<span class="texte-cache">, comme son nom peu vous lavoir fait remarqué, extrêmement dur ou si le joueur meurt il doit recommenser à sa dernière sauvegarde. Il est seulement possible de sauvegarder dans un lit durant la nuit et il est impossible d'utiliser la fonction pour passer le temps.</span></p>
+                
+                <input type="button" value="⮟" class="bouton-developper" onclick="etendreDescriptionMod(this)">
+                
                 <p>par <a href="index.html">Eowaven</a> le 2016-08-05</p>
             </div>
             
@@ -79,9 +96,12 @@
                     <img src="illustrations/mod-temperature-realiste.jpg" alt="Tournade en noir et blanc" title="Tournade en noir et blanc">
                 </a>
                 
-                <a href="mod-temperature-realiste.html"><h3>Température réaliste</h3></a>
+                <a class="titre-mod" href="mod-temperature-realiste.html"><h3>Température réaliste</h3></a>
                 
-                <p>Température réaliste est un mod qui ajoute des nouveaux climats.</p>
+                <p>Température réaliste est un mod qui ajoute des nouveaux climats<span class="texte-cache">, tel que des tempêtes de sable, de neige, de météor. Aussi le mod ajoute des tournades, des ouragans et des tremblements de terre.</span></p>
+                
+                <input type="button" value="⮟" class="bouton-developper" onclick="etendreDescriptionMod(this)">
+                
                 <p>par <a href="index.html">Oluria</a> le 2017-01-23</p>     
             </div>
 		</div>

@@ -142,3 +142,27 @@ function afficherInfobulles()
 								champsInfobulleNomUtilisateur.style.display = "none";
 							};
 }
+
+function etendreDescriptionMod(mod)
+{
+    modSelectioner = mod.parentNode;
+    boutonDevelopper = document.getElementsByClassName('bouton-developper');
+    fenetreAEtendre = document.getElementsByClassName('mod');
+    spanTexteCache = document.getElementsByClassName('texte-cache');
+
+    if(modSelectioner == fenetreAEtendre[0])
+    {
+        (boutonDevelopper[0].value == '⮟') ? spanTexteCache[0].style.display = "inline-block" : spanTexteCache[0].style.display = "none";
+        boutonDevelopper[0].value=boutonDevelopper[0].value=='⮟'?'⮝':'⮟';
+    }
+    else if(modSelectioner == fenetreAEtendre[1])
+    {
+        (boutonDevelopper[1].value == '⮟') ? spanTexteCache[1].style.display = "inline-flex" : spanTexteCache[1].style.display = "none";
+        boutonDevelopper[1].value=boutonDevelopper[1].value=='⮟'?'⮝':'⮟';
+    }
+    else
+    {
+        (boutonDevelopper[2].value == '⮟') ? spanTexteCache[2].style.display = "inline-block" : spanTexteCache[2].style.display = "none";
+        boutonDevelopper[2].value=boutonDevelopper[2].value=='⮟'?'⮝':'⮟';
+    }
+}

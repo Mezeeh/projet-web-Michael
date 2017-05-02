@@ -393,7 +393,7 @@ h2, h3, #fil-d-ariane li, a
 	display:block;
 }
 
-.boutons
+.boutons:not(.bouton-developper)
 {
 	margin-top: 5px;
 }
@@ -401,4 +401,32 @@ h2, h3, #fil-d-ariane li, a
 #liens-sociaux a:hover
 {
 	text-decoration:underline;
+}
+
+.bouton-developper
+{
+    border-style:none;
+    background:none;
+    color:black;
+    margin: 0 0 10px 0;
+}
+
+.bouton-developper:hover
+{
+    color: #720404;
+}
+
+.bouton-developper input:focus 
+{
+    outline:none;
+}
+
+.texte-cache
+{
+    display: none;
+}
+
+.mod input:focus 
+{
+  outline: none;
 }
