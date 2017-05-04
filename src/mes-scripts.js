@@ -155,4 +155,67 @@ function etendreDescriptionMod(mod)
     
     spanTexteCache.style.display = (boutonDevelopper.innerHTML == '⮟') ? "inline-block" : "none";
     boutonDevelopper.innerHTML= (boutonDevelopper.innerHTML=='⮟') ? '⮝' : '⮟';
+    
+    //spanTexteCache.style.transition = "height 2s";
+    //spanTexteCache.style.height = "300px";
+}
+
+function afficherDetailsPageVignette(personnage)
+{
+    //alert("afficherDetailsPageVignette(personnage)");
+    personnageSelectionne = personnage.parentNode;
+    vignetteDetail = document.getElementById('vignette-detail');
+    personnageDejaActif = personnageSelectionne.classList.contains("active");
+    if(personnageSelectionne == document.querySelector(".personnages.active")){
+        personnageSelectionne.classList.remove("active");
+        vignetteDetail.classList.remove("active");
+        
+    }
+    
+    
+    
+    nomPersonnage = personnageSelectionne.querySelector('.nom-personnage').innerHTML;
+    detailsPersonnage = personnageSelectionne.querySelector('.details-personnage').innerHTML;
+    infosSupplementaires = personnageSelectionne.querySelector('.information-supplementaire').href;
+    imagePersonnage = personnageSelectionne.querySelector('.image-personnage').src;
+    
+    
+    
+    vignetteDetail.querySelector('.nom-personnage-vignette').innerHTML = nomPersonnage;
+    vignetteDetail.querySelector('.details-personnage-vignette').innerHTML = detailsPersonnage;
+    vignetteDetail.querySelector('.information-supplementaire-vignette').href = infosSupplementaires;
+    vignetteDetail.querySelector('.image-personnage-vignette').src = imagePersonnage.replace("mini/miniature-", "");
+    
+    //alert(vignetteDetail.style.display);
+    
+    if(personnageDejaActif)
+    {
+        vignetteDetail.classList.remove("active");
+    }
+    else
+    {
+        vignetteDetail.classList.add("active");
+    }
+    
+    listePersonnages = document.getElementsByClassName("personnages");
+    
+    //alert(listeLiensPersonnages);
+    
+    
+    for(var i = 0; i < listePersonnages.length; i++)
+    {
+        listePersonnages[i].classList.remove("active");
+        console.log(i + ":"+listePersonnages[i].classList);
+    }
+    
+    if(!personnageDejaActif)
+    {
+        personnageSelectionne.classList.add("active") ;
+        
+    }
+    
+    //alert(nomPersonnage);
+    //alert(detailsPersonnage);
+    //alert(infosSupplementaires);
+    //alert(vignetteDetail);
 }

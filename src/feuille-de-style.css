@@ -451,6 +451,102 @@ a.bouton-developper
 
 .mod-detail
 {
+    height: 0px;
     display: none;
 }
 
+.personnages
+{
+    display: inline;
+}
+
+.personnages.active .image-personnage
+{
+    border-color: #720404;
+    opacity: 1;
+}
+
+.image-personnage
+{
+    border: solid 4px black;
+    border-radius: 25px;
+    opacity: 0.7;
+}
+
+.image-personnage:hover 
+{
+    opacity: 1;
+    border-color: #720404;
+}
+
+#liste-personnages
+{
+    position: relative;
+    text-align: center;
+}
+
+#liste-personnages h2
+{
+    display: block;
+    width: 125px;
+}
+
+#vignette-detail
+{
+    width: 400px;
+    height: auto;
+    background-color: #c2c7d1;
+    position: relative;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 4px black;
+    border-radius: 35px;
+    display: none;
+    padding: 15px;
+}
+
+#vignette-detail *
+{
+    max-width: 400px;
+    margin:0;
+    display: inline-block;
+}
+#vignette-detail img
+{
+    border-radius: 25px;
+}
+
+#vignette-detail h3
+{
+    font-size: 24px;
+}
+
+#vignette-detail p
+{   
+    
+}
+
+#vignette-detail a
+{
+    
+    width: 100%;
+    text-align: right;
+    color: black;
+}
+
+#vignette-detail a:hover
+{
+    text-decoration: underline;
+    color: #720404;
+}
+
+.details-personnage, .nom-personnage, .information-supplementaire
+{
+    display: none;
+}
+
+#vignette-detail.active
+{
+    display: block;
+}
