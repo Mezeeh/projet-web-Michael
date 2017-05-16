@@ -113,6 +113,11 @@ h2, h3, #fil-d-ariane li, a
 	background:url(decorations/icone-contact.png) no-repeat;
 }
 
+#menu .faq a
+{
+    background: url(decorations/icone-faq.png) no-repeat;
+}
+
 #contenu
 {
 	margin-left: 15px;
@@ -550,3 +555,4 @@ a.bouton-developper
 {
     display: block;
 }
+

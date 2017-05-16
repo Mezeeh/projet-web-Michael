@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Witchmod</title>
+	
+	<link rel="stylesheet" type="text/css" href="feuille-de-style.css">
+	
+    <script src="decorations/accordion/jquery-1.12.4.min.js"></script>
+    <script src="decorations/accordion/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="mes-scripts.js"></script>
+    
+	<style>
+        #questions
+        {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        
+        #questions h3:hover
+        {
+            cursor: pointer;
+            background: rgba(104, 104, 104, 1);
+        }
+        
+        #questions h3
+        {
+            color: aliceblue;
+            padding: 10px;
+            margin: 0px;
+            background: rgba(104, 104, 104, 0.7);
+        }
+        
+        #questions h3:not(:first-child)
+        {
+            margin-top: 1px;
+        }
+        
+        #questions h3:focus
+        {
+            background: rgba(104, 104, 104, 1);
+            outline:none;
+        }
+        
+        #questions p
+        {
+            background-color: white;
+            padding: 20px;
+            color: black;
+        }
+        
+        #questions h3, #questions p
+        {
+            border-radius: 5px;
+            border: solid 0.01em grey;
+        }
+        
+        #question:focus
+        {
+            border-radius: 50px
+        }
+	</style>
+    
+	<script>
+      $( function() 
+        {
+            $( "#questions" ).accordion({
+              collapsible: true,
+              heightStyle: "content"
+            });
+        } );
+    </script>
+</head>
+<body>
+	<div id="page">
+		<div id="tete">
+			<h1><a href="index.html"><span>Witchmod</span></a></h1>
+            
+            <ul id="menu">
+				<li class="acceuil"><a href="index.html">Acceuil</a></li>
+				<li class="articles"><a href="mods.html">Mods</a></li>
+				<li class="actualite"><a href="actualite.html">Actualité</a></li>
+				<li class="compte"><a href="compte.html">Mon compte</a></li>
+				<li class="contact"><a href="contact.html">Contact</a></li>
+				<li class="faq"><a href="faq.html" class="active">F.A.Q</a></li>
+			</ul>
+			
+			<ul id="fil-d-ariane">
+				<li><a href="index.html">Acceuil</a></li>
+				<li>F.A.Q</li>
+			</ul>
+		</div>
+		
+		<div id="liste-questions">
+			<h2>F.A.Q</h2>
+            
+            <div id="questions">
+              <h3>Qu'est-ce que The Witcher 3: Wild Hunt ?</h3>
+              <div>
+                <p>The Witcher 3: Wild Hunt (polonais : Wiedźmin 3: Dziki Gon) est un jeu vidéo en vue à la troisième personne en monde ouvert de type action-RPG développé par le studio CD Projekt RED. Le jeu est le troisième de la série The Witcher, basée sur les livres éponymes de l'écrivain polonais Andrzej Sapkowski.</p>
+              </div>
+              <h3>Quand est sorti ce jeu ?</h3>
+              <div>
+                <p>Il est sorti le 19 mai 2015 sur Windows, PlayStation 4, Xbox One.</p>
+              </div>
+              <h3>Le jeu a-t-il gagné des prix ?</h3>
+              <div>
+                <p>Le jeu remporte le prix du jeu le plus attendu de 2015 lors des Game Awards de 20141, et est élu jeu ultime de l'année lors des Golden Joystick Awards.</p>
+              </div>
+              <h3>Où puis-je me procurer le jeu ?</h3>
+              <div>
+                <p>Il est possible de se procurer le jeu en ligne sur Steam, GOG Galaxy pour PC et sur le PlayStation Store ou le Microsof Store selon la console. Il est bien sur possible d'acheter le jeu en magasin.</p>
+              </div>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
