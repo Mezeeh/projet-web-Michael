@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Witchmod</title>
+	
+    <script type="text/javascript" src="lib/jquery/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="lib/strip/strip.pkgd.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/strip/strip.css"/>
+    
+    
+	<style>
+	
+		#liste-personnages
+		{
+			background-color:orange;
+			clear:both;
+		}
+
+		#liste-personnages .personnage
+		{
+			position:relative;
+			float:left;
+			background-color:white;
+			border:solid 1px black;
+			margin:5px;
+            font-family:Monotype Corsiva;
+		}
+        #liste-personnages .personnage .personnage-illustration img
+        {
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        
+		/* ecran et tablette */
+		@media only screen and (min-width: 768px)
+		{
+			#liste-personnages .personnage
+			{
+				height:200px;
+			}
+			#liste-personnages .personnage .personnage-illustration
+			{
+				height:200px;
+				width:200px;
+			}
+			#liste-personnages .personnage .personnage-nom
+			{
+				position:absolute;
+				display:block;
+				width:200px;
+				height:auto;
+                text-align: center;
+				top:0px;
+				left:0px;
+				background: rgba(104, 104, 104, 0.7);
+				font-weight:bold;
+				text-align:center;
+                color: aliceblue;
+			}
+			#liste-personnages .personnage .personnage-description
+			{
+				position:absolute;
+				display:block;
+				width:200px;
+				height:auto;
+				bottom:0px;
+				right:0px;
+				background: rgba(104, 104, 104, 0.7);
+				font-weight:bold;
+				text-align:center;
+                color: aliceblue;
+			}
+            /* A faire fonctionner */
+            #liste-personnages .personnage .personnage-illustration:hover #liste-personnages .personnage .personnage-nom
+            {
+                display: block;
+            }
+		}
+		/* mobile */
+		@media only screen and (max-width: 768px)
+		{
+			#liste-personnages .personnage
+			{
+                width: 200px;
+                height: 100px;
+			}
+			#liste-personnages *
+			{
+				width:100%;			
+			}
+			#liste-personnages .personnage .personnage-illustration
+			{
+				/*height:200px; /*pour le test car une vraie image serait carre*/
+			}
+            #liste-personnages .personnage .personnage-illustration img
+            {
+                position:absolute;
+                top: 0px;
+                left: 0px;
+                max-width: 50%;
+            }
+			#liste-personnages .personnage .personnage-nom
+			{
+                position:absolute;
+                top: 0px;
+                right: 0px;
+				display:block;
+				height:auto;
+				background: rgba(104, 104, 104, 0.7);
+				color:white;				
+				font-weight:bold;
+				text-align:center;
+                max-width: 50%;
+			}
+			#liste-personnages .personnage .personnage-description
+			{
+                position:absolute;
+                bottom: 0px;
+                right: 0px;
+				height:auto;
+				background-color:aqua;
+				font-weight:bold;
+				text-align:center;
+                max-width: 50%;
+			}
+
+		}
+		
+		
+	</style>
+	
+</head>
+<body>
+    <div id="tete">
+        <h1><a href="index.html"><span>Witchmod</span></a></h1>
+
+        <ul id="menu">
+            <li class="acceuil"><a href="index.html">Acceuil</a></li>
+            <li class="articles"><a href="mods.html">Mods</a></li>
+            <li class="actualite"><a href="actualite.html">Actualité</a></li>
+            <li class="compte"><a href="compte.html">Mon compte</a></li>
+            <li class="contact"><a href="contact.html">Contact</a></li>
+            <li class="faq"><a href="faq.html">F.A.Q</a></li>
+        </ul>
+
+        <ul id="fil-d-ariane">
+            <li><a href="index.html">Acceuil</a></li>
+            <li>Galerie mobile</li>
+        </ul>
+    </div>
+    
+	<div id="liste-personnages">
+	
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-eredin.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-eredin.jpg" alt="Eredin, roi de la chasse sauvage">
+                </a>
+            </div>
+			<span class="personnage-description">Roi de la chasse sauvage</span>
+			<span class="personnage-nom">Eredin</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-vernon-roche.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-vernon-roche.jpg" alt="Vernon Roche, commandant des forces spéciales de Témérie">
+                </a>
+            </div>
+			<span class="personnage-description">Commandant des forces spéciales de Témérie</span>
+			<span class="personnage-nom">Vernon Roche</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-zoltan-chivay.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-zoltan-chivay.jpg" alt="Zoltan Chivay, l'ami de Géralt">
+                </a>
+            </div>
+			<span class="personnage-description">Bon ami de Géralt</span>
+			<span class="personnage-nom">Zoltan Chivay</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-emperor-emhyr-var-emreis.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-emperor-emhyr-var-emreis.jpg" alt="Radowid V, roi de la Rédanie">
+                </a>
+            </div>
+			<span class="personnage-description">Roi de la Rédanie</span>
+			<span class="personnage-nom">Radowid V</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-lambert.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-lambert.jpg" alt="Lambert, sorceleur de l'école du loup">
+                </a>
+            </div>
+			<span class="personnage-description">Sorceleur de l'école du loup</span>
+			<span class="personnage-nom">Lambert</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-letho.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-letho.jpg" alt="Letho, sorceleur de l'école de la vipère">
+                </a>
+            </div>
+			<span class="personnage-description">Sorceleur de l'école de la vipère</span>
+			<span class="personnage-nom">Letho</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-jeannot.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-jeannot.jpg" alt="Jeannot le Célicole">
+                </a>
+            </div>
+			<span class="personnage-description">Un Célicole</span>
+			<span class="personnage-nom">Jeannot</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-imlerith.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-imlerith.jpg" alt="Imlerith, général de la chasse sauvage">
+                </a>
+            </div>
+			<span class="personnage-description">Général de la chasse sauvage</span>
+			<span class="personnage-nom">lmlerith</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-eskel.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-eskel.jpg" alt="Eskel, sorceleur de l'école du loup">
+                </a>
+            </div>
+			<span class="personnage-description">Sorceleur de l'école du loup</span>
+			<span class="personnage-nom">Eskel</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-dandelion.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-dandelion.jpg" alt="Jaskier le poète">
+                </a>
+            </div>
+			<span class="personnage-description">Poète et grand ami de Géralt</span>
+			<span class="personnage-nom">Jaskier</span>			
+		</div>
+		<div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-birna.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-birna.jpg" alt="Birna la reine de Skellige">
+                </a>
+            </div>
+			<span class="personnage-description">Reine de Skellige</span>
+			<span class="personnage-nom">Birna Bran</span>			
+		</div>
+	    <div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-avallach.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-avallach.jpg" alt="Avallac'h l'elf érudit">
+                </a>
+            </div>
+			<span class="personnage-description">Elf érudit</span>
+			<span class="personnage-nom">Avallac'h</span>			
+		</div>
+        <div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-emperor-emhyr-var-emreis.jpg" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-emperor-emhyr-var-emreis.jpg" alt="Emhyr var Emreis, empereur de Nilfgaard">
+                </a>
+            </div>
+			<span class="personnage-description">Empereur de Nilfgaard</span>
+			<span class="personnage-nom">Emhyr var Emreis</span>			
+		</div>
+        <div class="personnage">
+			<div class="personnage-illustration">
+                <a href="illustrations/galerie-mobile-olgierd-von-everec.png" class="strip" data-strip-caption="">
+                    <img src="illustrations/galerie-mobile-olgierd-von-everec.png" alt="Olgierd von Everec l'immortel">
+                </a>
+            </div>
+			<span class="personnage-description">Capitaine de la Compagnie libre redanienne et doté du pouvoir d'immortalité</span>
+			<span class="personnage-nom">Olgierd von Everec</span>			
+		</div>
+	</div>
+
+</body>
+</html>
