@@ -11,9 +11,12 @@
     
 	<style>
 	
+        *
+        {
+            font-size: 20px;
+        }
 		#liste-personnages
 		{
-			background-color:orange;
 			clear:both;
 		}
 
@@ -49,7 +52,7 @@
 			#liste-personnages .personnage .personnage-nom
 			{
 				position:absolute;
-				display:block;
+				display:none;
 				width:200px;
 				height:auto;
                 text-align: center;
@@ -63,7 +66,7 @@
 			#liste-personnages .personnage .personnage-description
 			{
 				position:absolute;
-				display:block;
+				display:none;
 				width:200px;
 				height:auto;
 				bottom:0px;
@@ -74,7 +77,8 @@
                 color: aliceblue;
 			}
             /* A faire fonctionner */
-            #liste-personnages .personnage .personnage-illustration:hover #liste-personnages .personnage .personnage-nom
+            #liste-personnages .personnage:hover .personnage-nom, 
+            #liste-personnages .personnage:hover .personnage-description
             {
                 display: block;
             }
@@ -82,10 +86,26 @@
 		/* mobile */
 		@media only screen and (max-width: 768px)
 		{
+            #liste-personnages .personnage > *
+            {
+                float: left;
+            }
+            #liste-personnages::after
+            {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            #liste-personnages .personnage::after
+            {
+                content: "";
+                clear: both;
+                display: block;
+            }
 			#liste-personnages .personnage
 			{
                 width: 200px;
-                height: 100px;
+                height: 175px;
 			}
 			#liste-personnages *
 			{
@@ -93,38 +113,44 @@
 			}
 			#liste-personnages .personnage .personnage-illustration
 			{
-				/*height:200px; /*pour le test car une vraie image serait carre*/
+                content: "";
+                clear: both;
+                display: block;
+                width: 50%;
+                height: 100%;
 			}
             #liste-personnages .personnage .personnage-illustration img
             {
-                position:absolute;
+                position:relative;
                 top: 0px;
                 left: 0px;
-                max-width: 50%;
+                height: 100%;
             }
 			#liste-personnages .personnage .personnage-nom
 			{
-                position:absolute;
+                position:relative;
                 top: 0px;
                 right: 0px;
-				display:block;
+				display:inline-block;
 				height:auto;
 				background: rgba(104, 104, 104, 0.7);
 				color:white;				
 				font-weight:bold;
 				text-align:center;
                 max-width: 50%;
+                margin-bottom: 5px;
 			}
 			#liste-personnages .personnage .personnage-description
 			{
-                position:absolute;
+                position:relative;
                 bottom: 0px;
                 right: 0px;
 				height:auto;
-				background-color:aqua;
 				font-weight:bold;
 				text-align:center;
                 max-width: 50%;
+                display:inline-block;
+                font-size: 15px;
 			}
 
 		}
@@ -160,8 +186,8 @@
                     <img src="illustrations/galerie-mobile-eredin.jpg" alt="Eredin, roi de la chasse sauvage">
                 </a>
             </div>
-			<span class="personnage-description">Roi de la chasse sauvage</span>
-			<span class="personnage-nom">Eredin</span>			
+            <span class="personnage-nom">Eredin</span>
+			<span class="personnage-description">Roi de la chasse sauvage</span>			
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -169,8 +195,8 @@
                     <img src="illustrations/galerie-mobile-vernon-roche.jpg" alt="Vernon Roche, commandant des forces spéciales de Témérie">
                 </a>
             </div>
-			<span class="personnage-description">Commandant des forces spéciales de Témérie</span>
-			<span class="personnage-nom">Vernon Roche</span>			
+			<span class="personnage-nom">Vernon Roche</span>
+			<span class="personnage-description">Commandant des forces spéciales de Témérie</span>			
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -178,8 +204,8 @@
                     <img src="illustrations/galerie-mobile-zoltan-chivay.jpg" alt="Zoltan Chivay, l'ami de Géralt">
                 </a>
             </div>
-			<span class="personnage-description">Bon ami de Géralt</span>
-			<span class="personnage-nom">Zoltan Chivay</span>			
+			<span class="personnage-nom">Zoltan Chivay</span>
+			<span class="personnage-description">Bon ami de Géralt</span>			
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -187,8 +213,8 @@
                     <img src="illustrations/galerie-mobile-emperor-emhyr-var-emreis.jpg" alt="Radowid V, roi de la Rédanie">
                 </a>
             </div>
-			<span class="personnage-description">Roi de la Rédanie</span>
-			<span class="personnage-nom">Radowid V</span>			
+			<span class="personnage-nom">Radowid V</span>
+			<span class="personnage-description">Roi de la Rédanie</span>			
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -196,8 +222,8 @@
                     <img src="illustrations/galerie-mobile-lambert.jpg" alt="Lambert, sorceleur de l'école du loup">
                 </a>
             </div>
-			<span class="personnage-description">Sorceleur de l'école du loup</span>
-			<span class="personnage-nom">Lambert</span>			
+			<span class="personnage-nom">Lambert</span>	
+			<span class="personnage-description">Sorceleur de l'école du loup</span>		
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -205,8 +231,8 @@
                     <img src="illustrations/galerie-mobile-letho.jpg" alt="Letho, sorceleur de l'école de la vipère">
                 </a>
             </div>
-			<span class="personnage-description">Sorceleur de l'école de la vipère</span>
-			<span class="personnage-nom">Letho</span>			
+			<span class="personnage-nom">Letho</span>
+			<span class="personnage-description">Sorceleur de l'école de la vipère</span>			
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -214,8 +240,8 @@
                     <img src="illustrations/galerie-mobile-jeannot.jpg" alt="Jeannot le Célicole">
                 </a>
             </div>
-			<span class="personnage-description">Un Célicole</span>
-			<span class="personnage-nom">Jeannot</span>			
+			<span class="personnage-nom">Jeannot</span>	
+			<span class="personnage-description">Un Célicole</span>		
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -223,8 +249,8 @@
                     <img src="illustrations/galerie-mobile-imlerith.jpg" alt="Imlerith, général de la chasse sauvage">
                 </a>
             </div>
-			<span class="personnage-description">Général de la chasse sauvage</span>
-			<span class="personnage-nom">lmlerith</span>			
+			<span class="personnage-nom">lmlerith</span>
+			<span class="personnage-description">Général de la chasse sauvage</span>			
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -232,8 +258,8 @@
                     <img src="illustrations/galerie-mobile-eskel.jpg" alt="Eskel, sorceleur de l'école du loup">
                 </a>
             </div>
-			<span class="personnage-description">Sorceleur de l'école du loup</span>
-			<span class="personnage-nom">Eskel</span>			
+			<span class="personnage-nom">Eskel</span>
+			<span class="personnage-description">Sorceleur de l'école du loup</span>			
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -241,8 +267,8 @@
                     <img src="illustrations/galerie-mobile-dandelion.jpg" alt="Jaskier le poète">
                 </a>
             </div>
-			<span class="personnage-description">Poète et grand ami de Géralt</span>
-			<span class="personnage-nom">Jaskier</span>			
+			<span class="personnage-nom">Jaskier</span>
+			<span class="personnage-description">Poète et grand ami de Géralt</span>			
 		</div>
 		<div class="personnage">
 			<div class="personnage-illustration">
@@ -250,8 +276,8 @@
                     <img src="illustrations/galerie-mobile-birna.jpg" alt="Birna la reine de Skellige">
                 </a>
             </div>
-			<span class="personnage-description">Reine de Skellige</span>
-			<span class="personnage-nom">Birna Bran</span>			
+			<span class="personnage-nom">Birna Bran</span>	
+			<span class="personnage-description">Reine de Skellige</span>		
 		</div>
 	    <div class="personnage">
 			<div class="personnage-illustration">
@@ -259,8 +285,8 @@
                     <img src="illustrations/galerie-mobile-avallach.jpg" alt="Avallac'h l'elf érudit">
                 </a>
             </div>
-			<span class="personnage-description">Elf érudit</span>
-			<span class="personnage-nom">Avallac'h</span>			
+			<span class="personnage-nom">Avallac'h</span>
+			<span class="personnage-description">Elf érudit</span>			
 		</div>
         <div class="personnage">
 			<div class="personnage-illustration">
@@ -268,8 +294,8 @@
                     <img src="illustrations/galerie-mobile-emperor-emhyr-var-emreis.jpg" alt="Emhyr var Emreis, empereur de Nilfgaard">
                 </a>
             </div>
-			<span class="personnage-description">Empereur de Nilfgaard</span>
-			<span class="personnage-nom">Emhyr var Emreis</span>			
+			<span class="personnage-nom">Emhyr var Emreis</span>
+			<span class="personnage-description">Empereur de Nilfgaard</span>			
 		</div>
         <div class="personnage">
 			<div class="personnage-illustration">
@@ -277,8 +303,8 @@
                     <img src="illustrations/galerie-mobile-olgierd-von-everec.png" alt="Olgierd von Everec l'immortel">
                 </a>
             </div>
-			<span class="personnage-description">Capitaine de la Compagnie libre redanienne et doté du pouvoir d'immortalité</span>
-			<span class="personnage-nom">Olgierd von Everec</span>			
+			<span class="personnage-nom">Olgierd von Everec</span>
+			<span class="personnage-description">Capitaine de la Compagnie libre redanienne et doté du pouvoir d'immortalité</span>			
 		</div>
 	</div>
 

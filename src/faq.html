@@ -10,7 +10,10 @@
     <script src="decorations/accordion/jquery-ui.min.js"></script>
     <script type="text/javascript" src="mes-scripts.js"></script>
     
+    <!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+    
 	<style>
+        
         #questions
         {
             margin-left: 25px;
@@ -29,6 +32,8 @@
             padding: 10px;
             margin: 0px;
             background: rgba(104, 104, 104, 0.7);
+            border-radius: 5px;
+            outline: none;
         }
         
         #questions h3:not(:first-child)
@@ -36,10 +41,13 @@
             margin-top: 1px;
         }
         
-        #questions h3:focus
+        #questions h3.ui-state-active
         {
             background: rgba(104, 104, 104, 1);
             outline:none;
+            border-radius: 0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
         }
         
         #questions p
@@ -47,17 +55,13 @@
             background-color: white;
             padding: 20px;
             color: black;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
         
         #questions h3, #questions p
         {
-            border-radius: 5px;
             border: solid 0.01em grey;
-        }
-        
-        #question:focus
-        {
-            border-radius: 50px
         }
 	</style>
     
