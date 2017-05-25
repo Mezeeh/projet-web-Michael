@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Parallax</title>
+</head>
+    
+<style>
+
+    html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body { 
+      margin:0;
+      padding:0;
+      perspective: 1px;
+      transform-style: preserve-3d;
+      height: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 250%;
+        color: #720404;
+        font-family: Morpheus;
+    }
+
+    p {
+      font-size: 140%;
+      line-height: 150%;
+      color: #333;
+        font-family:cursive;
+    }
+
+    .presentation {
+      position: relative;
+      padding: 25vh 10%;
+      min-height: 100vh;
+      width: 100vw;
+      box-sizing: border-box;
+      box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+      transform-style: inherit;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      width: 320px;
+      height: 240px;
+      transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+      padding: 10px;
+      border-radius: 5px;
+      background: rgba(240,230,220, .7);
+      box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    }
+
+    img:last-of-type {
+      transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+    }
+
+    .presentation:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left:0;
+      right:0;
+    }
+
+    .partie {
+      width: 50%;
+      padding: 5%;
+      border-radius: 5px;
+      background: rgba(240,230,220, .7);
+      box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    }
+
+    .presentation:nth-child(2n) .partie {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .presentation:nth-child(2n+1) .partie {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .presentation, .presentation:before {
+      background: 50% 50% / cover;  
+    }
+
+    .banniere {
+      text-align: center;
+      font-size: 175%;
+      color: #c2c7d1;
+      text-shadow: 0 2px 2px #000;
+    }
+    
+    @font-face {
+        font-family: Morpheus;
+        src: url("font/MORPHEUS.TTF");
+    }
+    
+    #banniere h1
+    {
+        color: white;
+    }
+
+    #banniere {
+      background-image: url("decorations/parallax-baniere.jpg");
+      background-attachment: fixed;  
+    }
+
+    #presentation-jeu:before {
+      background-image: url("decorations/parallax-image-haut.png");
+      transform: translateZ(-1px) scale(2);
+      z-index:-1;
+    }
+
+    #presentation-personnage-principal {
+      background-image: url("decorations/parallax-image-milieu.png");
+      background-attachment: fixed;
+    }
+
+    #presentation-histoire:before {
+      background-image: url("decorations/parallax-image-bas.png");
+      transform: translateZ(-1px) scale(2);
+      z-index:-1;
+    }
+
+    #presentation-credit {
+      background: #222;
+    }
+    
+</style>
+    
+<body>
+
+    <div id="banniere" class="presentation banniere">
+      <h1>The Witcher 3: Wild Hunt</h1>
+    </div>
+
+    <div id="presentation-jeu" class="presentation">
+      <div class="partie">
+        <h1>Monde Ouvert</h1>
+        <p>Dans le monde ouvert de Wild Hunt, vous choisissez votre propre chemin d'aventure. Vous jouez en tant que chasseur de primes, un homme de la route. Vous définissez vos propres objectifs et choisissez vos propres destinations. Allez après un contrat sur la tête d'un monstre méchant harcelant un village ou aidez un prince d'entrainement qui a besoin d'un travail sale, quel que soit le style de quête épique que vous désirez, The Witcher le fournira.</p>
+      </div>
+    </div>
+
+    <div id="presentation-personnage-principal" class="presentation">
+      <div class="partie">
+        <h1>Chasseur de Montres Professionnel</h1>
+        <p>Les sorciers sont des mutants, des hommes soumis à une formation éprouvante et des expériences de modification de la chair qui les préparent à un seul but: tuer des monstres. Geralt a été formé à l'élite École du Loup et est considéré comme l'un des sorciers les plus mortels jamais formés. Il possède des réflexes et une force surhumaine, et ses compétences de combat d'épée sont inégalées.</p>
+      </div>
+      <img src="illustrations/parallax-mini-1.jpg">
+      <img src="illustrations/parallax-mini-2.jpg">
+    </div>
+
+    <div id="presentation-histoire" class="presentation">
+      <div class="partie">
+        <h1>Histoire</h1>
+        <p>Dans un monde déchiré par la guerre, avec la chasse sauvage sur le dos, vous prendrez votre contrat le plus important: retrouver l'enfant de la prophétie, une clé et une arme qui peut sauver ou détruire tout.</p>
+      </div>
+    </div>
+
+    <div id="presentation-credit" class="presentation banniere">
+      <h1>WitchMod</h1>
+    </div>
+    
+</body>
+</html>
